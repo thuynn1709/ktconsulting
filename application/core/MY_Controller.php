@@ -12,8 +12,10 @@ class MY_Controller extends CI_Controller {
         $this->load->model('fmenu_model');
     }
     
-    public function _loadFrontendHeader(){
-        $this->load->view('frontend/header');
+    public function _loadFrontendHeader($controller){
+        $data = array();
+        $data['controller'] = $controller;
+        $this->load->view('frontend/header', $data);
     }
     
     public function _loadFrontendHeaderAccount(){

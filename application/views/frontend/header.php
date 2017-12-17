@@ -38,7 +38,7 @@
 
         <!-- jQuery -->
         <script src="<?php echo base_url(); ?>public/frontend/js/vendor/modernizr-2.8.1.min.js"></script>
-        
+
         <script src="<?php echo base_url(); ?>public/frontend/js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="<?php echo base_url(); ?>public/frontend/js/bootstrap.min.js"></script>
@@ -108,7 +108,7 @@
                                                 </div>
 
                                                 <ul class="social-links list-inline pull-right">
-                                                    
+
                                                     <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/VietNam.png" /></a></li>
                                                     <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/UnitedStatesofAmerica.png" /></a></li>
                                                     <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/Germany.png" /></a></li>
@@ -150,14 +150,11 @@
 
                                     <ul class="nav navbar-nav navbar-right">
                                         <!-- Home -->
-                                        
-                                         <li class="active"><a href="home.html"><?php echo lang("menu_home"); ?></a></li>
+                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="home.html"><?php echo lang("menu_home"); ?></a></li>
                                         <!-- /Home -->
 
-                                        
-
                                         <!-- Services -->
-                                        <li class="dropdown"><a href="#"><?php echo lang("menu_services"); ?> <span class="fa fa-angle-down"></span></a>
+                                        <li class="dropdown <?php if ($controller == 'services') echo ' active '; ?>"><a href="#"><?php echo lang("menu_services"); ?> <span class="fa fa-angle-down"></span></a>
                                             <!-- submenu-wrapper -->
                                             <div class="submenu-wrapper">
                                                 <div class="submenu-inner">
@@ -173,11 +170,11 @@
                                             </div>
                                             <!-- /submenu-wrapper -->
                                         </li>
-                                        
+
                                         <!-- Blog -->
-                                        <li class="active"><a href="home.html"><?php echo lang("menu_news"); ?></a></li>
-                                        
-                                        <li class="active"><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
+                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="home.html"><?php echo lang("menu_news"); ?></a></li>
+
+                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
                                     </ul>
                                 </div><!-- /.navbar-collapse -->
                             </div><!-- /.container -->

@@ -16,7 +16,6 @@ class LanguageLoader {
         $ci =& get_instance();
         $ci->load->helper('language');
         $siteLang = $ci->session->userdata('site_lang');
-        $siteLang = 'german';
         if ($siteLang) {
             $ci->lang->load('message',$siteLang);
             $ci->lang->load('header',$siteLang);
