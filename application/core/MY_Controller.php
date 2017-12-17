@@ -13,31 +13,12 @@ class MY_Controller extends CI_Controller {
     }
     
     public function _loadFrontendHeader(){
-        $menus = array();
-        $menus = $this->fmenu_model->get_all();
-        $list_menus = array();
-        foreach ( $menus as $m) {
-            $list_menus[$m->alias]['name'] = $m->name;
-            $list_menus[$m->alias]['alias'] = $m->alias;
-            $list_menus[$m->alias]['details'] = $this->fproductcategory_model->get_all_category_by_menuId($m->id);
-        }
-        $data = array();
-        $data['list_menus'] = $list_menus;
-        $this->load->view('frontend/header', $data);
+        $this->load->view('frontend/header');
     }
     
     public function _loadFrontendHeaderAccount(){
-        $menus = array();
-        $menus = $this->fmenu_model->get_all();
-        $list_menus = array();
-        foreach ( $menus as $m) {
-            $list_menus[$m->alias]['name'] = $m->name;
-            $list_menus[$m->alias]['alias'] = $m->alias;
-            $list_menus[$m->alias]['details'] = $this->fproductcategory_model->get_all_category_by_menuId($m->id);
-        }
-        $data = array();
-        $data['list_menus'] = $list_menus;
-        $this->load->view('frontend/header_account', $data);
+        
+        $this->load->view('frontend/header');
     }
     
     public function _loadFrontendAdvertisement(){

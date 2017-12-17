@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/shopping/application/views/frontend/left-slidebar.php</file>
-            <file>file:/D:/xampp/htdocs/shopping/application/controllers/admin/config.php</file>
-            <file>file:/D:/xampp/htdocs/shopping/application/core/MY_Controller.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/contact/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/vietnamese/header_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/config/config.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/english/contact_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/config/database.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/header.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Contact.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/german/header_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/english/header_lang.php</file>
         </group>
     </open-files>
 </project-private>

@@ -1,162 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="SIRODRUGSTORE - Chuyên hàng xách tay ĐỨC">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
         <meta name="author" content="">
-        <title>Home | SIRODRUGSTORE - Chuyên hàng xách tay ĐỨC</title>
+
+        <title><?php echo lang("header_company_name"); ?> </title>
+        <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap Core CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Flaticon CSS -->
+        <link href="<?php echo base_url(); ?>public/frontend/fonts/flaticon/flaticon.css" rel="stylesheet">
+        <!-- font-awesome CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/font-awesome.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>public/frontend/css/prettyPhoto.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>public/frontend/css/price-range.css" rel="stylesheet">
+        <!-- Offcanvas CSS -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/hippo-off-canvas.css" rel="stylesheet">
+        <!-- animate CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/animate.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>public/frontend/css/main.css" rel="stylesheet">
+        <!-- language CSS -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/language-select.css" rel="stylesheet">
+        <!-- owl.carousel CSS -->
+        <link href="<?php echo base_url(); ?>public/frontend/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+        <!-- magnific-popup -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/magnific-popup.css" rel="stylesheet">
+        <!-- Main menu -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/menu.css" rel="stylesheet">
+        <!-- Template Common Styles -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/template.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="<?php echo base_url(); ?>public/frontend/css/style.css" rel="stylesheet">
+        <!-- Responsive CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/responsive.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->       
-        <link rel="shortcut icon" href="images/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>public/frontend/images/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>public/frontend/images/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>public/frontend/images/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>public/frontend/images/ico/apple-touch-icon-57-precomposed.png">
-        
+
+        <!-- jQuery -->
         <script src="<?php echo base_url(); ?>public/frontend/js/jquery.js"></script>
-        <script src="<?php echo base_url(); ?>public/frontend/js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
         <script src="<?php echo base_url(); ?>public/frontend/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>public/admin/js/notify.js"></script>
-        
-    </head><!--/head-->
+        <!-- owl.carousel -->
+        <script src="<?php echo base_url(); ?>public/frontend/owl.carousel/owl.carousel.min.js"></script>
+        <!-- Magnific-popup -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/jquery.magnific-popup.min.js"></script>
+        <!-- Offcanvas Menu -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/hippo-offcanvas.js"></script>
+        <!-- inview -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/jquery.inview.min.js"></script>
+        <!-- stellar -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/jquery.stellar.js"></script>
+        <!-- countTo -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/jquery.countTo.js"></script>
+        <!-- classie -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/classie.js"></script>
+        <!-- selectFx -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/selectFx.js"></script>
+        <!-- sticky kit -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/jquery.sticky-kit.min.js"></script>
+        <!-- GOGLE MAP -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/vendor/modernizr-2.8.1.min.js"></script>
 
-    <body>
-        <header id="header"><!--header-->
-            <div class="header_top"><!--header_top-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="contactinfo">
-                                <ul class="nav nav-pills">
-                                    <li><a href="#"><i class="fa fa-phone"></i> +841255282228</a></li> 
-                                    <li><a href="#"><i class="fa fa-envelope"></i> sirodrugstore@gmail.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="social-icons pull-right">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="https://www.facebook.com/SIROdrugstore/?ref=aymt_homepage_panel"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="https://www.instagram.com/sirodrugstore/?hl=vi"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header_top-->
 
-            <div class="header-middle"><!--header-middle-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="logo pull-left">
-                                <a href="index.html"><img src="<?php echo base_url(); ?>public/frontend/images/home/logo.png" alt="" /></a>
-                            </div>
-                            <div class="btn-group pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                        USA
-                                        <span class="caret"></span>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD1Zq1otPtrIYuU1w-nZcJoIO4nQhCRuIY"></script>
+        <script src="<?php echo base_url(); ?>public/frontend/js/twitterFetcher_min.js"></script>
+        <!-- Custom Script -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/scripts.js"></script>
+
+
+
+
+
+
+        <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="js/vendor/html5shim.js"></script>
+                <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+
+    <body id="page-top">
+        <div id="st-container" class="st-container">
+            <div class="st-pusher">
+                <div class="st-content">
+                    <header class="header">
+                        <nav class="top-bar">
+                            <div class="overlay-bg">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <div class="call-to-action">
+                                                <ul class="list-inline">
+                                                    <li><a href="#"><i class="fa fa-phone"></i> 1-800-987-654</a></li>
+                                                    <li><a href="#"><i class="fa fa-envelope"></i> shipping@ktconsulting.de</a></li>
+                                                </ul>
+                                            </div><!-- /.call-to-action -->
+                                        </div><!-- /.col-sm-6 -->
+
+                                        <div class="col-sm-6 hidden-xs">
+                                            <div class="topbar-right">
+                                                <div class="lang-support pull-right">
+                                                    <select id="languagechange" class="cs-select cs-skin-elastic">
+                                                        <option value="" disabled selected>Language</option>
+                                                        <option value="english"   <?php if ($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>English</option>
+                                                        <option value="german"  <?php if ($this->session->userdata('site_lang') == 'german') echo 'selected="selected"'; ?>>German</option>
+                                                        <option value="vietnamese"   <?php if ($this->session->userdata('site_lang') == 'vietnamese') echo 'selected="selected"'; ?>>Vietnamese</option>
+                                                    </select>
+                                                    <select class="selectpicker">
+                                                        <option>Mustard</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                      </select>
+                                                </div>
+
+                                                <ul class="social-links list-inline pull-right">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                                </ul>
+                                            </div><!-- /.social-links -->
+                                        </div><!-- /.col-sm-6 -->
+                                    </div><!-- /.row -->
+                                </div><!-- /.container -->
+                            </div><!-- /.overlay-bg -->
+                        </nav><!-- /.top-bar -->
+
+                        <div id="search">
+                            <button type="button" class="close">×</button>
+                            <form>
+                                <input type="search" value="" placeholder="type keyword(s) here" />
+                                <button type="submit" class="btn btn-primary"><?php echo lang("search"); ?></button>
+                            </form>
+                        </div>
+
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container mainnav">
+                                <div class="navbar-header">
+                                    <h1 class="logo"><a class="navbar-brand" href="index.html"><img src="<?php echo base_url(); ?>public/frontend/img/logo.png" alt=""></a></h1>
+
+                                    <!-- offcanvas-trigger -->
+                                    <button type="button" class="navbar-toggle collapsed pull-right" >
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <i class="fa fa-bars"></i>
                                     </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Canada</a></li>
-                                        <li><a href="#">UK</a></li>
-                                    </ul>
+
                                 </div>
 
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                        DOLLAR
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Canadian Dollar</a></li>
-                                        <li><a href="#">Pound</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="shop-menu pull-right">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                    <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header-middle-->
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse navbar-collapse">
 
-            <div class="header-bottom"><!--header-bottom-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="mainmenu pull-left">
-                                <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <?php 
-                                    if (!empty($list_menus)){
-                                        foreach ($list_menus as $m) {                  
-                                    ?>
-                                        <?php 
-                                        if (!empty($m['details'])){
-                                        ?>
-                                        <li class="dropdown"><a href="#"><?php echo $m['name']; ?><i class="fa fa-angle-down"></i></a>
-                                            <ul role="menu" class="sub-menu">
-                                                <?php 
-                                                foreach ($m['details'] as $md) {                  
-                                                ?>
-                                                <li><a href="shop.html"><?php echo $md->name; ?></a></li>
-                                                <?php                      
-                                                }
-                                                ?>
-                                            </ul>
-                                        </li>     
-                                        <?php                      
-                                        } else {                
-                                        ?>
-                                        <li><a href="index.html"><?php echo $m['name']; ?></a></li>
-                                        <?php                      
-                                        }           
-                                        ?>
-                                    
-                                    <?php                      
-                                        }                        
-                                    }                
-                                    ?>
-                                    
-                                </ul>
+
+
+                                    <span class="search-button pull-right"><a href="#search"><i class="fa fa-search"></i></a></span>
+
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <!-- Home -->
+                                        
+                                         <li class="active"><a href="home.html"><?php echo lang("menu_home"); ?></a></li>
+                                        <!-- /Home -->
+
+                                        
+
+                                        <!-- Services -->
+                                        <li class="dropdown"><a href="#"><?php echo lang("menu_services"); ?> <span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="air.html">Air transportation</a></li>
+                                                        <li><a href="marine.html">Marine transportation</a></li>
+                                                        <li><a href="moving.html">Moving & storage</a></li>
+                                                        <li><a href="shipping.html">Shipping & operations</a></li>
+                                                        <li><a href="transportation.html">Transportation logistics</a></li>
+                                                        <li><a href="trucking.html">Trucking</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+                                        
+                                        <!-- Blog -->
+                                        <li class="active"><a href="home.html"><?php echo lang("menu_news"); ?></a></li>
+                                        
+                                        <li class="active"><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container -->
+                        </nav>
+                    </header>
+
+                    <section class="page-title-section">
+                        <div class="container">
+                            <div class="page-header-wrap">
+                                <div class="page-header">
+                                    <h1><?php echo lang("header_contact_us"); ?></h1>
+                                </div>
+                                <ol class="breadcrumb">
+                                    <li><a href="#"><?php echo lang("menu_home"); ?></a></li>
+                                    <li class="active"><?php echo lang("menu_contact"); ?></li>
+                                </ol>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="search_box pull-right">
-                                <input type="text" placeholder="Search"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header-bottom-->
-        </header><!--/header-->
+                    </section>
+
+                    <script type="text/javascript">
+                        window.SelectFx && $('select[data-init-plugin="cs-select"]').each(function() {
+                        var el = $(this).get(0);
+                        $(el).wrap('<div class="cs-wrapper"></div>');
+                        new SelectFx(el);
+                        new SelectFx(el, {
+                            onChange: function( val ) { 
+                               alert(val);
+                            }
+           
+                       });
+                    });
+
+                    </script>

@@ -1,70 +1,82 @@
-<div id="contact-page" class="container">
-    <div class="bg">
-        <div class="row">    		
-            <div class="col-sm-12">    			   			
-                <h2 class="title text-center">Liên <strong>Hệ</strong></h2>    			    				    				
-                <div id="map_google" class="contact-map">
-                </div>
-            </div>			 		
-            </div>    	
-        <div class="row">  	
-            <div class="col-sm-8">
-                <div class="contact-form">
-                    <h2 class="title text-center">GỬI EMAIL CHO CHÚNG TÔI !</h2>
-                    <div class="status alert alert-success" style="display: none"></div>
-                    <form id="main-contact-form" class="contact-form row" name="contact-form" action="<?php echo base_url('contact/register_contact'); ?>" method="post">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="Họ tên">
+<section class="contact-info-section">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title"><?php echo lang("get_in_touch"); ?></h2>
+            <span class="section-sub"><?php echo lang("were_are_ready"); ?></span>
+        </div>
+
+        <div class="row content-row">
+
+            <div class="col-md-7">
+                <div class="contact-map">
+                    <h3>Contact Form</h3>
+                    <form id="main-contact-form" action="<?php echo base_url('contact/register_contact'); ?>" method="POST">
+                        <div class="form-group">
+                            <label for="name"><?php echo lang("form_name"); ?></label>
+                            <input name="name" type="text" class="form-control"  required="" placeholder="">
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="tel" name="phone"  maxlength = "11" min = "10" class="form-control" required="required" placeholder="Số điện thoại ( 10 hoặc 11 số )">
+                        <div class="form-group">
+                            <label for="email"><?php echo lang("form_email_addresse"); ?></label>
+                            <input name="email" type="email" class="form-control" required="" placeholder="">
                         </div>
-                        <div class="form-group col-md-12">
-                            <input type="email" name="email" class="form-control" required="required" placeholder="Địa chỉ email">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject"><?php echo lang("form_subject"); ?></label>
+                                    <input name="subject" type="text" class="form-control" required="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone"><?php echo lang("form_phonenumber"); ?></label>
+                                    <input name="phone" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="form-group col-md-12">
-                            <input type="text" name="subject" class="form-control" required="required" placeholder="Tiêu đề">
+                        <div class="form-group text-area">
+                            <label for="message"><?php echo lang("form_content_email"); ?></label>
+                            <textarea name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
                         </div>
-                        <div class="form-group col-md-12">
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Nội dung tin nhắn"></textarea>
-                        </div>                        
-                        <div class="form-group col-md-12">
-                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="Gửi đi">
-                        </div>
+
+                        <button type="submit" class="btn btn-primary"><?php echo lang("form_send_email"); ?></button>
                     </form>
                 </div>
             </div>
-            <div class="col-sm-4">
+
+            <div class="col-md-5">
                 <div class="contact-info">
-                    <h2 class="title text-center">THÔNG TIN LIÊN HỆ</h2>
+                    <h3><?php echo lang("head_office"); ?></h3>
+
                     <address>
-                        <p>Sirodrugstore Inc.</p>
-                        <p>Đội 9 - Điễn Xá Nam Trực</p>
-                        <p>Nam Định Việt Nam</p>
-                        <p>Mobile: +841255282228</p>
-                        <p>Mobile 2: +841279933888</p>
-                        <p>Email: sirodrugstore.com</p>
+                        <?php 
+                        $siteLang = $ci->session->userdata('site_lang');
+                        if ($siteLang == 'vietnamese') {
+                            echo lang("street"). 'Herzberg 33-34'; 
+                        } else {
+                            echo 'Herzberg'.lang("street"). '33-34';
+                        }
+                    ?>
+                        <br> 
+                        Berlin 10365 <br>
+                        Phone : +12 30 456789<br>
+                        Email : shipping@ktconsulting.de<br>
                     </address>
-                    <div class="social-networks">
-                        <h2 class="title text-center">Liên hết mạng xã hội</h2>
-                        <ul>
-                            <li><a href="https://www.facebook.com/SIROdrugstore/?ref=aymt_homepage_panel"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/sirodrugstore/?hl=vi"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>    			
-        </div>  
-    </div>	
-</div><!--/#contact-page-->
+                </div><!-- /.contact-info -->
+
+                <div class="contact-map">
+                    <h3>Location Map</h3>
+
+                    <div id="contactMap"></div>
+                </div><!-- /.contact-info -->
 
 
+            </div>
+        </div>
+    </div>
+</section>
 <script>
-    
-    $(function () {
+$(function () {
         $('#main-contact-form').submit(function(event){
             event.preventDefault();
             var r = confirm("Bạn chắc chắn muốn gửi tin nhắn !");
@@ -92,17 +104,4 @@
         });
     })
     
-    function initMap() {
-      var uluru = {lat: 20.399958, lng: 106.226360};
-      var map = new google.maps.Map(document.getElementById('map_google'), {
-        zoom: 12,
-        center: uluru
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPp1mxssik-ZQhonHwqUV-iEWgVUtyD8o&callback=initMap"></script>
-
+    </script>

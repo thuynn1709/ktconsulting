@@ -21,8 +21,9 @@ class Contact extends MY_Controller {
     }
     
     public function index(){
-        $this->_loadFrontendHeaderAccount();
-        $this->load->view('frontend/contact/index');
+     
+        $this->_loadFrontendHeader();
+        $this->load->view('frontend/content');
         $this->_loadFrontendFooter();
     }
     
