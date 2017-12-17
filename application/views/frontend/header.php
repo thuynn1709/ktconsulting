@@ -37,6 +37,8 @@
         <link href="<?php echo base_url(); ?>public/frontend/css/responsive.css" rel="stylesheet">
 
         <!-- jQuery -->
+        <script src="<?php echo base_url(); ?>public/frontend/js/vendor/modernizr-2.8.1.min.js"></script>
+        
         <script src="<?php echo base_url(); ?>public/frontend/js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="<?php echo base_url(); ?>public/frontend/js/bootstrap.min.js"></script>
@@ -67,11 +69,6 @@
         <!-- Custom Script -->
         <script src="<?php echo base_url(); ?>public/frontend/js/scripts.js"></script>
 
-
-
-
-
-
         <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -101,25 +98,20 @@
 
                                         <div class="col-sm-6 hidden-xs">
                                             <div class="topbar-right">
-                                                <div class="lang-support pull-right">
+                                                <div class="lang-support pull-right" style="display: none" >
                                                     <select id="languagechange" class="cs-select cs-skin-elastic">
                                                         <option value="" disabled selected>Language</option>
-                                                        <option value="english"   <?php if ($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>English</option>
-                                                        <option value="german"  <?php if ($this->session->userdata('site_lang') == 'german') echo 'selected="selected"'; ?>>German</option>
-                                                        <option value="vietnamese"   <?php if ($this->session->userdata('site_lang') == 'vietnamese') echo 'selected="selected"'; ?>>Vietnamese</option>
+                                                        <option value="english" data-class="flag-uk"  <?php if ($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>English</option>
+                                                        <option value="german"  data-class="flag-gr"<?php if ($this->session->userdata('site_lang') == 'german') echo 'selected="selected"'; ?>>German</option>
+                                                        <option value="vietnamese" data-class="flag-vn" <?php if ($this->session->userdata('site_lang') == 'vietnamese') echo 'selected="selected"'; ?>>Vietnamese</option>
                                                     </select>
-                                                    <select class="selectpicker">
-                                                        <option>Mustard</option>
-                                                        <option>Ketchup</option>
-                                                        <option>Relish</option>
-                                                      </select>
                                                 </div>
 
                                                 <ul class="social-links list-inline pull-right">
-                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                                    
+                                                    <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/VietNam.png" /></a></li>
+                                                    <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/UnitedStatesofAmerica.png" /></a></li>
+                                                    <li><a href="#"><img src="<?php echo base_url(); ?>public/frontend/Flags/flags/flags/16/Germany.png" /></a></li>
                                                 </ul>
                                             </div><!-- /.social-links -->
                                         </div><!-- /.col-sm-6 -->
@@ -205,18 +197,3 @@
                             </div>
                         </div>
                     </section>
-
-                    <script type="text/javascript">
-                        window.SelectFx && $('select[data-init-plugin="cs-select"]').each(function() {
-                        var el = $(this).get(0);
-                        $(el).wrap('<div class="cs-wrapper"></div>');
-                        new SelectFx(el);
-                        new SelectFx(el, {
-                            onChange: function( val ) { 
-                               alert(val);
-                            }
-           
-                       });
-                    });
-
-                    </script>

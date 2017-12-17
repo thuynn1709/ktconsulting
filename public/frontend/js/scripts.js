@@ -422,7 +422,7 @@ jQuery(function ($) {
         $longitude = 13.491149,
         $map_zoom = 15; /* ZOOM SETTING */
         //google map custom marker icon
-    var $marker_url = './public/frontend/img/map-marker.png';
+    var $marker_url = '/public/frontend/img/map-marker.png';
 
     //we define here the style of the map
     var style = [{

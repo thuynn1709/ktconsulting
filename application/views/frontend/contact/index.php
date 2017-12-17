@@ -50,16 +50,17 @@
 
                     <address>
                         <?php 
-                        $siteLang = $ci->session->userdata('site_lang');
+                        $CI =& get_instance();
+                        $siteLang = $CI->session->userdata('site_lang');
                         if ($siteLang == 'vietnamese') {
                             echo lang("street"). 'Herzberg 33-34'; 
                         } else {
-                            echo 'Herzberg'.lang("street"). '33-34';
+                            echo 'Herzberg '. lang("street"). ' 33-34';
                         }
                     ?>
                         <br> 
                         Berlin 10365 <br>
-                        Phone : +12 30 456789<br>
+                        Tel : 030 57794047<br>
                         Email : shipping@ktconsulting.de<br>
                     </address>
                 </div><!-- /.contact-info -->

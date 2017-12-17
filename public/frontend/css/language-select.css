@@ -67,6 +67,7 @@ div.cs-select {
 }
 
 .cs-select span.cs-placeholder[data-current="united-kingdom"]:after,
+.cs-select span.cs-placeholder[data-current="vn"]:after,
 .cs-select span.cs-placeholder[data-current="france"]:after,
 .cs-select span.cs-placeholder[data-current="spain"]:after,
 .cs-select span.cs-placeholder[data-current="bangladesh"]:after {
@@ -76,6 +77,10 @@ div.cs-select {
 
 .cs-select span.cs-placeholder[data-current="united-kingdom"]:after {
   background: #fff url(../img/flags/united-kingdom.svg) no-repeat center;
+}
+
+.cs-select span.cs-placeholder[data-current="vn"]:after {
+  background: #fff url(../img/flags/vietnam.svg) no-repeat center;
 }
 
 .cs-select span.cs-placeholder[data-current="france"]:after {
