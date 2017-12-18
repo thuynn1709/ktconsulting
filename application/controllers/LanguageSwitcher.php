@@ -11,9 +11,11 @@
  *
  * @author Nguyen Ruy
  */
-class LanguageSwitcher {
+class LanguageSwitcher extends MY_Controller {
     public function __construct() {
-        parent::__construct();     
+        parent::__construct();   
+        $this->load->helper(array('form', 'url', 'cookie'));
+        $this->load->library(array('form_validation','session'));
     }
  
     function switchLang($language = "") {

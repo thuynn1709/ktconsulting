@@ -66,7 +66,7 @@
                 </div><!-- /.contact-info -->
 
                 <div class="contact-map">
-                    <h3>Location Map</h3>
+                    <h3><?php echo lang("contact_location_map"); ?></h3>
 
                     <div id="contactMap"></div>
                 </div><!-- /.contact-info -->
@@ -80,21 +80,21 @@
 $(function () {
         $('#main-contact-form').submit(function(event){
             event.preventDefault();
-            var r = confirm("Bạn chắc chắn muốn gửi tin nhắn !");
+            var r = confirm('<?php echo lang("contact_are_you_sure_to_send"); ?>');
             if (r == true) {
                 var form = $('#main-contact-form');
                 $.ajax
                 ({ 
-                    type : "POST",
                     url  :   form.attr("action"),
                     data : form.serialize(),
+                    type : "POST",
                     success: function(result) {
                         obj = jQuery.parseJSON(result);
                         if ( obj.msg == 'success') {
-                            $(".btn-primary").notify( "Gửi tin nhắn thành công !",  { position:"left", className: 'success', });
+                            $(".btn-primary").notify( "<?php echo lang("contact_send_success"); ?>",  { position:"right", className: 'success', });
                             $('#main-contact-form')[0].reset();
                         }else {
-                             $(".btn-primary").notify( "Gửi tin nhắn không thành công !",  { position:"left", className: 'error', });
+                             $(".btn-primary").notify( "<?php echo lang("contact_send_fail"); ?>",  { position:"right", className: 'error', });
                         }
                     }
                 });

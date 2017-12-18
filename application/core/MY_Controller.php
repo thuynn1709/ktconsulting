@@ -18,35 +18,7 @@ class MY_Controller extends CI_Controller {
         $this->load->view('frontend/header', $data);
     }
     
-    public function _loadFrontendHeaderAccount(){
-        
-        $this->load->view('frontend/header');
-    }
     
-    public function _loadFrontendAdvertisement(){
-        $this->load->view('frontend/advertisement');
-    }
-    
-    public function _loadFrontendSlider(){
-        $this->load->view('frontend/slider');
-    }
-    
-    public function _loadFrontendLeftSlidebar(){
-        
-        $categories = $this->fproductcategory_model->get_all_category();
-        $product_in_category = array();
-        foreach ( $categories as $ct) {
-            $product_in_category[$ct->id]['name'] = $ct->name;
-            $product_in_category[$ct->id]['alias'] = $ct->alias;
-            $product_in_category[$ct->id]['details'] = $this->fproduct_model->get_all_by_categoryId($ct->id);
-        }
-        $all_product = $this->fmarken_model->get_all_product_in_marken();
-        $data['markens'] = $all_product;
-        $data['product_in_category'] = $product_in_category;
-        
-        $this->load->view('frontend/left-slidebar', $data);
-    }
-
     public function _loadFrontendFooter(){
         $this->load->view('frontend/footer');
     }

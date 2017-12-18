@@ -11,5 +11,9 @@ $lang['street'] = 'Đường';
 $lang['get_in_touch'] = 'Liên lạc';
 $lang['we_are_ready'] = 'Chúng tôi luôn sẵn lòng giúp đỡ khách hàng';
 $lang['location_map'] = 'Bản đồ';
+$lang['contact_are_you_sure_to_send'] = 'Bạn chắc chắn muốn gửi tin nhắn ?';
+$lang['contact_send_success'] = 'Tin nhắn được gửi thành công !';
+$lang['contact_send_fail'] = 'Tin nhắn gửi không thành công. Vui lòng thử lại !';
+$lang['contact_location_map'] = 'Bản đồ';
 
 

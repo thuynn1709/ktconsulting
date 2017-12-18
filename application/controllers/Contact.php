@@ -27,6 +27,26 @@ class Contact extends MY_Controller {
         $this->_loadFrontendFooter();
     }
     
+    public function testemail()
+    {
+        $this->load->library('email');
+        $config['protocol'] = 'sendmail';
+        $config['mailpath'] = '/usr/sbin/sendmail';
+        $config['charset'] = 'iso-8859-1';
+        $config['wordwrap'] = TRUE;
+
+        $this->email->initialize($config);
+        
+
+        $this->email->from('dienchuot@yahoo.com', 'Your Name');
+        $this->email->to('thuynn1709@gmail.com');
+        
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+
+        $this->email->send();
+    }
+
     public function register_contact(){
         if($_POST){
             
@@ -54,7 +74,20 @@ class Contact extends MY_Controller {
                     'status' => 0,
                     'created' => now()
                 );
-                try { 
+                
+                try {
+                    $config['protocol'] = 'sendmail';
+                    $config['mailpath'] = '/usr/sbin/sendmail';
+                    $config['charset'] = 'iso-8859-1';
+                    $config['wordwrap'] = TRUE;
+                    $this->email->initialize($config);
+                    $this->email->from($email, $name); 
+                    $this->email->to('thuynn1709@gmail.com');
+                    $this->email->subject($subject); 
+                    $this->email->message($message); 
+                    //Send mail 
+                    $this->email->send();
+                    
                     $this->contact_model->insert($insert_array);
                     $array = array ('msg' => 'success');
                     echo json_encode($array);die;

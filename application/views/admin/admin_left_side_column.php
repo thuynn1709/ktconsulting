@@ -8,7 +8,7 @@
           <img src="<?php echo base_url(); ?>public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Admin</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -41,17 +41,17 @@
         
         <li class="treeview">
           <a href="#">
-            <i class="fa fa fa-table"></i>
-            <span>Quản lý sản phẩm</span>
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <span>Quản lý tin tức</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/product/index') ; ?>"><i class="fa fa-circle-o"></i> DS sản phẩm</a></li>
-            <li><a href="<?php echo base_url('admin/product/add') ; ?>"><i class="fa fa-circle-o"></i> Thêm mới SP</a></li>
-            <li><a href="<?php echo base_url('admin/product_category/index') ; ?>"><i class="fa fa-circle-o"></i> DS danh mục sản phẩm</a></li>
-            <li><a href="<?php echo base_url('admin/product_category/add') ; ?>"><i class="fa fa-circle-o"></i> Thêm mới danh mục SP</a></li>
+            <li><a href="<?php echo base_url('admin/news/index') ; ?>"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
+            <li><a href="<?php echo base_url('admin/news/add') ; ?>"><i class="fa fa-circle-o"></i> Thêm mới tin tức</a></li>
+            <li><a href="<?php echo base_url('admin/new_category/index') ; ?>"><i class="fa fa-circle-o"></i> DS danh mục tin tức</a></li>
+            <li><a href="<?php echo base_url('admin/new_category/add') ; ?>"><i class="fa fa-circle-o"></i> Thêm mới danh mục tin tức</a></li>
           </ul>
         </li>
         
