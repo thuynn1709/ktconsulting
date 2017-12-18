@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/ktconsulting/public/frontend/js/scripts.js</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/contact/index.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/header.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Contact.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/admin/new_category/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/admin/New_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/admin/admin_left_side_column.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/admin/new/add.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/admin/new/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/admin/news.php</file>
         </group>
     </open-files>
 </project-private>
