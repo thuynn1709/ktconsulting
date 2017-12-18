@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-12-18 02:09:59
+Date: 2017-12-18 23:42:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -89,8 +89,8 @@ INSERT INTO `contact` VALUES ('9', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen
 INSERT INTO `contact` VALUES ('10', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fdasfadfadfadfadsf', 'fdafafaf', '0', '1513548939');
 INSERT INTO `contact` VALUES ('11', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fdasfadfadfadfadsf', 'fdafafaf', '0', '1513548944');
 INSERT INTO `contact` VALUES ('12', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fasdfasfdasfasfadsfsfdasfasdf', 'fdafafaf', '0', '1513549863');
-INSERT INTO `contact` VALUES ('13', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fasdfasfdasfasfadsfsfdasfasdf', 'fdafafaf', '0', '1513549868');
-INSERT INTO `contact` VALUES ('14', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fdsafasdfdsafadsf', 'fdafafaf', '0', '1513549902');
+INSERT INTO `contact` VALUES ('13', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fasdfasfdasfasfadsfsfdasfasdf', 'fdafafaf', '1', '1513549868');
+INSERT INTO `contact` VALUES ('14', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fdsafasdfdsafadsf', 'fdafafaf', '1', '1513549902');
 
 -- ----------------------------
 -- Table structure for export
@@ -279,14 +279,42 @@ CREATE TABLE `news` (
   `content_en` varchar(5000) DEFAULT NULL,
   `author` varchar(40) DEFAULT NULL,
   `status` tinyint(2) DEFAULT NULL,
+  `readed` int(11) DEFAULT '0',
   `created` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of news
 -- ----------------------------
-INSERT INTO `news` VALUES ('1', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', '21751965_1832793110071999_5300614802528550849_n.jp', null, null, null, 'Nguyen Ruy', '1', '1513558740');
+INSERT INTO `news` VALUES ('1', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('2', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('3', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('4', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('5', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('6', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('7', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('8', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('9', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('10', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('11', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('12', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('13', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('14', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('15', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('16', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('17', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('18', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('19', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('20', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('21', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('22', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('23', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('24', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('25', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('26', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('27', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
+INSERT INTO `news` VALUES ('28', 'fdafasfdsafasdf', 'tieng anh', 'tieng duc', 'fdafasfdsafasdf', '1', '<p>nọi dung</p>', '<p>Inhalt</p>', '<p>content</p>', 'blog-1.jpg', null, null, null, 'Nguyen Ruy', '1', '0', '1513558740');
 
 -- ----------------------------
 -- Table structure for news_category
