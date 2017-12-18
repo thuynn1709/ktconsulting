@@ -19,8 +19,11 @@ class Contact_model extends CI_Model {
         parent::__construct();
     }
     
-    public function get_all( $limit = 10, $offset = 0) {
-        
+    public function get_all( $search = '', $limit = 10, $offset = 0) {
+        if ($search != '') {
+            $this->db->like('email', $search);
+            $this->db->or_like('name', $search);
+        }
         $this->db->order_by("created", "desc");
         $this->db->limit($limit, $offset);
         $this->db->last_query();
@@ -34,7 +37,22 @@ class Contact_model extends CI_Model {
         return   $this->db->get( $this->table)->row();
     }
     
-    public function count_all_results() {
+    public function count_all_results($search = '') {
+        if ($search != '') {
+            $this->db->like('email', $search);
+            $this->db->or_like('name', $search);
+        }
+        $this->db->from( $this->table);
+        return $this->db->count_all_results();
+    }
+    
+    public function count_all() {
+        $this->db->from( $this->table);
+        return $this->db->count_all_results();
+    }
+    
+    public function count_new_email() {
+        $this->db->where('status', 0);
         $this->db->from( $this->table);
         return $this->db->count_all_results();
     }
@@ -52,6 +70,11 @@ class Contact_model extends CI_Model {
         return $this->db->update( $this->table, $data);
     }
 
+    public function update_readed($id){
+        $this->db->where('id', $id);
+        return $this->db->update( $this->table, array('status' => 1));
+    }
+    
     public function insert ($data, $insert_batch = false){
         if ( $insert_batch) {
             $this->db->insert_batch( $this->table, $data);

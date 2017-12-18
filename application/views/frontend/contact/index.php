@@ -1,3 +1,17 @@
+<section class="page-title-section">
+    <div class="container">
+        <div class="page-header-wrap">
+            <div class="page-header">
+                <h1><?php echo lang("header_contact_us"); ?></h1>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="#"><?php echo lang("menu_home"); ?></a></li>
+                <li class="active"><?php echo lang("menu_contact"); ?></li>
+            </ol>
+        </div>
+    </div>
+</section>
+
 <section class="contact-info-section">
     <div class="container">
         <div class="text-center">
@@ -49,15 +63,15 @@
                     <h3><?php echo lang("head_office"); ?></h3>
 
                     <address>
-                        <?php 
-                        $CI =& get_instance();
+                        <?php
+                        $CI = & get_instance();
                         $siteLang = $CI->session->userdata('site_lang');
                         if ($siteLang == 'vietnamese') {
-                            echo lang("street"). 'Herzberg 33-34'; 
+                            echo lang("street") . 'Herzberg 33-34';
                         } else {
-                            echo 'Herzberg '. lang("street"). ' 33-34';
+                            echo 'Herzberg ' . lang("street") . ' 33-34';
                         }
-                    ?>
+                        ?>
                         <br> 
                         Berlin 10365 <br>
                         Tel : 030 57794047<br>
@@ -77,32 +91,32 @@
     </div>
 </section>
 <script>
-$(function () {
-        $('#main-contact-form').submit(function(event){
+    $(function () {
+        $('#main-contact-form').submit(function (event) {
             event.preventDefault();
             var r = confirm('<?php echo lang("contact_are_you_sure_to_send"); ?>');
             if (r == true) {
                 var form = $('#main-contact-form');
                 $.ajax
-                ({ 
-                    url  :   form.attr("action"),
-                    data : form.serialize(),
-                    type : "POST",
-                    success: function(result) {
-                        obj = jQuery.parseJSON(result);
-                        if ( obj.msg == 'success') {
-                            $(".btn-primary").notify( "<?php echo lang("contact_send_success"); ?>",  { position:"right", className: 'success', });
-                            $('#main-contact-form')[0].reset();
-                        }else {
-                             $(".btn-primary").notify( "<?php echo lang("contact_send_fail"); ?>",  { position:"right", className: 'error', });
-                        }
-                    }
-                });
+                        ({
+                            url: form.attr("action"),
+                            data: form.serialize(),
+                            type: "POST",
+                            success: function (result) {
+                                obj = jQuery.parseJSON(result);
+                                if (obj.msg == 'success') {
+                                    $(".btn-primary").notify("<?php echo lang("contact_send_success"); ?>", {position: "right", className: 'success', });
+                                    $('#main-contact-form')[0].reset();
+                                } else {
+                                    $(".btn-primary").notify("<?php echo lang("contact_send_fail"); ?>", {position: "right", className: 'error', });
+                                }
+                            }
+                        });
             } else {
-                
+
             }
             return false;
         });
     })
-    
-    </script>
+
+</script>

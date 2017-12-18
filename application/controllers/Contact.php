@@ -37,7 +37,6 @@ class Contact extends MY_Controller {
         try {
             $mail = new PHPMailer();
 
-
             $mail->SMTPDebug = 3;
             $mail->IsSMTP();
             $mail->Mailer = 'smtp';

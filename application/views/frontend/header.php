@@ -35,6 +35,7 @@
         <link href="<?php echo base_url(); ?>public/frontend/css/style.css" rel="stylesheet">
         <!-- Responsive CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/responsive.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>public/frontend/css/blog.css" rel="stylesheet" media="screen">
 
         <!-- jQuery -->
         <script src="<?php echo base_url(); ?>public/frontend/js/vendor/modernizr-2.8.1.min.js"></script>
@@ -176,23 +177,11 @@
                                         <!-- Blog -->
                                         <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="home.html"><?php echo lang("menu_news"); ?></a></li>
 
-                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
+                                        <li <?php if ($controller == 'contact') echo 'class="active"'; ?>><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
                                     </ul>
                                 </div><!-- /.navbar-collapse -->
                             </div><!-- /.container -->
                         </nav>
                     </header>
 
-                    <section class="page-title-section">
-                        <div class="container">
-                            <div class="page-header-wrap">
-                                <div class="page-header">
-                                    <h1><?php echo lang("header_contact_us"); ?></h1>
-                                </div>
-                                <ol class="breadcrumb">
-                                    <li><a href="#"><?php echo lang("menu_home"); ?></a></li>
-                                    <li class="active"><?php echo lang("menu_contact"); ?></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
+                    
