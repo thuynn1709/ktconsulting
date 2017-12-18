@@ -5,8 +5,12 @@
         <group>
             <file>file:/D:/xampp/htdocs/ktconsulting/public/frontend/js/scripts.js</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/contact/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/LanguageSwitcher.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/config/config.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/core/MY_Controller.php</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/header.php</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Contact.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/hooks/LanguageLoader.php</file>
         </group>
     </open-files>
 </project-private>
