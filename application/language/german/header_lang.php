@@ -7,3 +7,4 @@ $lang['menu_news'] = 'Nachrichten';
 $lang['menu_contact'] = 'Kontakt';
 $lang['search'] = 'Suchen';
 $lang['header_contact_us'] = 'Kontaktieren Sie uns';
+$lang['header_menu_news'] = 'Nachrichten';

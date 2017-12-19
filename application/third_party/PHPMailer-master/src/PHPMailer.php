@@ -322,7 +322,7 @@ class PHPMailer
      *
      * @var int
      */
-    public $Timeout = 600;
+    public $Timeout = 900;
 
     /**
      * SMTP class debug output mode.

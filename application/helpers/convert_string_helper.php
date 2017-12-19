@@ -23,5 +23,13 @@ if ( ! function_exists('sanitizeTitle'))
         return strtolower($str);
     }
     
-
 }
+
+if ( ! function_exists('subString'))
+{
+    function subString($str) {
+        return substr( $str , 50). '...';
+    }
+    
+}
+
