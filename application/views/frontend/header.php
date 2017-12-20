@@ -7,11 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-<<<<<<< HEAD
+
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-=======
-        <link rel="shortcut icon" href="kt.png" type="image/x-icon">
->>>>>>> 44f201f2091448870b9856b01ce637e9028fce9b
         <title><?php echo lang("header_company_name"); ?> </title>
         <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
