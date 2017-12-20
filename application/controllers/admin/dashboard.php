@@ -11,19 +11,19 @@
  *
  * @author Nguyen Ruy
  */
-class Home extends MY_Controller {
 
+class Dashboard extends MY_Controller {
     //put your code here
     public function __construct() {
         parent::__construct();
-        $this->load->model('admin/featuresitems_model');
-        $this->load->model('admin/smallmenuitems_model');
+        if (! $this->is_logged_in_admin()) {
+            redirect(base_url('admin/login/login')); 
+        }
     }
-
+    
     public function index() {
-        $this->_loadFrontendHeader('home');
-        $this->load->view('frontend/home/index');
-        $this->_loadFrontendFooter();
+        $this->_loadAdminHeader();
+        $this->load->view('admin/dashboard/index');
+        $this->_loadAdminFooter();
     }
-
 }

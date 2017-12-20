@@ -17,4 +17,5 @@ $lang['blog_most_read'] = 'Meist Gelesen';
 $lang['blog_categories'] = 'Blog Kategorien';
 $lang['blog_flicker_photo'] = 'Flicker Photo';
 $lang['blog_continue_reading'] = 'Weiterlesen';
+$lang['blog_search'] = 'Suchen';
 

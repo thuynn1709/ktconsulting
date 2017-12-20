@@ -22,7 +22,6 @@ class News extends MY_Controller {
         $this->load->model('admin/newcategory_model');
         $this->load->model('admin/new_model');
         $this->load->model('admin/menu_model');
-        $this->load->model('admin/marken_model');
         $this->load->library('pagination');
     }
 
@@ -211,11 +210,10 @@ class News extends MY_Controller {
         }
 
         $this->_loadAdminHeader();
-        $category = array();
-        $category = $this->newcategory_model->get_all();
-        $data['category'] = $category;
+        
+        $data['categories'] = $this->newcategory_model->get_all();;
         $data['item'] = $new;
-        $this->load->view('admin/news/edit', $data);
+        $this->load->view('admin/new/edit', $data);
         $this->_loadAdminFooter();
     }
 
@@ -224,10 +222,9 @@ class News extends MY_Controller {
         if (empty($id)) {
             show_404();
         }
-        $product = $this->new_model->get_one($id);
-        unlink(base_url("public/images/news/" . $product->img));
-
-        $this->product_model->del_one($id);
+        $new = $this->new_model->get_one($id);
+        unlink(base_url().'public/images/news/'.$new->img);
+        $this->new_model->del_one($id);
         redirect('admin/news/index');
     }
 
@@ -241,5 +238,16 @@ class News extends MY_Controller {
 
         return $config;
     }
+    
+    function deleteImage($filename){
+      
+      $path = base_url().'public/images/news/'.$filename ;
+      if(is_file($path)){
+        unlink($path);
+        echo 'File '.$filename.' has been deleted';die;
+      } else {
+        echo 'Could not delete '.$filename.', file does not exist';die;
+      }
+  }
 
 }

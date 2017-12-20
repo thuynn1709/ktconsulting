@@ -26,17 +26,14 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Mục quản lý</li>
-        <li class="treeview">
-          <a href="#">
+        
+        <li>
+          <a href="<?php echo base_url('admin/dashboard/index') ; ?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              <small class="label pull-right bg-green"></small>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
         </li>
         
         <li class="treeview">
@@ -65,53 +62,14 @@
         </li>
         
         <li>
-          <a href="<?php echo base_url('admin/order') ; ?>">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Quản lý Orders</span>
+          <a href="<?php echo base_url('admin/contact') ; ?>">
+            <i class="fa fa-envelope" aria-hidden="true"></i> <span>Quản lý email</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
             </span>
           </a>
         </li>
         
-        <li class="treeview">
-            <a href="#">
-                <i class="fa fa-money" aria-hidden="true"></i> <span>Quản lý đơn hàng</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-                <li><a href="<?php echo base_url('admin/sale/add') ; ?>"><i class="fa fa-circle-o"></i> Tạo đơn hàng mới</a></li>
-                <li><a href="<?php echo base_url('admin/sale') ; ?>"><i class="fa fa-circle-o"></i> Danh sách hàng đã bán</a></li>
-            </ul>
-        </li>
-        
-        <li>
-          <a href="<?php echo base_url('admin/import') ; ?>">
-            <i class="fa fa-floppy-o" aria-hidden="true"></i> <span>Quản lý nhập hàng</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"></small>
-            </span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="<?php echo base_url('admin/extracost') ; ?>">
-            <i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span>Quản lý chi tiêu phát sinh</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"></small>
-            </span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="<?php echo base_url('admin/menu/index') ; ?>">
-            <i class="fa fa-files-o"></i> <span>Quản lý menu</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"></small>
-            </span>
-          </a>
-        </li>
         
         <li class="treeview">
             <a href="#">

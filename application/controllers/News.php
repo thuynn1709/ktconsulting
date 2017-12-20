@@ -67,15 +67,33 @@ class News extends MY_Controller {
         $data['search'] = $search;
 
         $data['categories'] = $this->fnewcategory_model->get_alls();
+        $data['recent_post'] = $this->fnew_model->get_recent_post();
+        $data['most_read'] = $this->fnew_model->get_most_readed();
  
         $this->load->view('frontend/news/index', $data);
         $this->_loadFrontendFooter();
     }
     
     public function detail(){
+        $alias = $this->uri->segment(3);
+        if (empty($alias)) {
+            show_404();
+        }
+        $result = $this->fnew_model->get_by_alias($alias);
         
+        if (empty($result)) {
+            show_404();
+        }
         $this->_loadFrontendHeader('news');
-        $this->load->view('frontend/news/index');
+        $data['item'] = $result;
+        $data['siteLang'] = $this->session->userdata('site_lang');
+        $data['categories'] = $this->fnewcategory_model->get_alls();
+        $data['recent_post'] = $this->fnew_model->get_recent_post();
+        $data['most_read'] = $this->fnew_model->get_most_readed();
+        $data['link_prev'] = $this->fnew_model->get_prev_id($result->id);
+        $data['link_next'] = $this->fnew_model->get_next_id($result->id);
+        $this->fnew_model->update_views($result->id);
+        $this->load->view('frontend/news/detail', $data);
         $this->_loadFrontendFooter();
         
     }

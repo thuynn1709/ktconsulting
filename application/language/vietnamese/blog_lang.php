@@ -17,4 +17,5 @@ $lang['blog_most_read'] = 'Đọc nhiều';
 $lang['blog_categories'] = 'Danh mục tin tức';
 $lang['blog_flicker_photo'] = 'Thư viện ảnh';
 $lang['blog_continue_reading'] = 'Đọc tiếp';
+$lang['blog_search'] = 'Tìm kiếm';
 

@@ -219,21 +219,10 @@
                         <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
                     </div>
                     <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
-                        <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                        <li>
-                            <a href="#">Pages</a>
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="service.html">Service</a></li>
-                                <li><a href="our-people.html">Our people</a></li>
-                                <li><a href="career.html">Career</a></li>
-                                <li><a href="faq.html">FAQ Page</a></li>
-                                <li><a href="typography.html">Typography</a></li>
-                            </ul>
-
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
+                        <li class="<?php if ($controller == 'home') echo ' active '; ?>"><a href="<?php echo base_url('home'); ?>"><?php echo lang("menu_home"); ?><span class="sr-only">(current)</span></a></li>
+                        
+                        <li class="<?php if ($controller == 'services') echo ' active '; ?>">
+                            <a href="<?php echo base_url('services'); ?>"><?php echo lang("menu_services"); ?></a>
                             <ul>
                                 <li><a href="air.html">Air transportation</a></li>
                                 <li><a href="marine.html">Marine transportation</a></li>
@@ -244,19 +233,9 @@
                             </ul>
 
                         </li>
-                        <li>
-                            <a href="#">Blog</a>
-                            <ul>
-                                <li>
-                                    <a href="blog.html">Standard blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog-single.html">Single blog</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
-                        <li><a href="typography.html">Typography</a></li>
+                        <li class="<?php if ($controller == 'news') echo ' active '; ?>"><a href="<?php echo base_url('news'); ?>"><?php echo lang("menu_news"); ?></a></li>
+                        <li class="<?php if ($controller == 'contact') echo ' active '; ?>"><a href="<?php echo base_url('contact'); ?>"><?php echo lang("menu_contact"); ?></a></li>
+                       
                     </ul>
                     <div class="offcanvas-widgets hidden-sm hidden-xs">
                         <div id="twitterWidget">

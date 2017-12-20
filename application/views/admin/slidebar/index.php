@@ -4,7 +4,7 @@
     <section class="content">
       <!-- /.row -->
       <div class="row">
-        <form action="<?php echo site_url('admin/product/index');?>" method = "post">
+        <form action="<?php echo site_url('admin/slidebar/index');?>" method = "post">
             <div class="col-xs-12">
                     <div class="col-xs-3">
                         <button style="width: 150px; margin-top: 25px;" id="add_new" type="button" class="btn btn-block btn-primary">Thêm mới</button>  
@@ -49,8 +49,8 @@
                     ?> 
                     <tr>
                       <td><?php echo $stt; ?></td>
-                      <td><?php echo $rs->title; ?></td>
-                      <td><?php echo $rs->describe; ?></td>
+                      <td><?php echo $rs->title_vn; ?></td>
+                      <td><?php echo $rs->desc_vn; ?></td>
                       <?php 
                         if ($rs->status == 1) {
                         ?> 
@@ -58,7 +58,7 @@
                         <?php } else {  ?> 
                       <td><span class="label label-danger">Không hiển thị</span></td>
                       <?php } ?> 
-                      <td>
+                      <td  class="col-md-2">
                         <div class="btn-group">
                             <button type="button" data-value="<?php echo $rs->id; ?>" class="btn btn-info">Sửa</button>
                             <button type="button" data-value="<?php echo $rs->id; ?>" class="btn btn-warning">Xóa</button>
@@ -106,7 +106,7 @@
             var r = confirm("Chắc chắn xóa !");
             if (r == true) {
                 var id = $(this).attr('data-value');
-                window.location.href = '<?php echo base_url(); ?>admin/slidebar/add/' + id;
+                window.location.href = '<?php echo base_url(); ?>admin/slidebar/delete/' + id;
                 return false;
             } else {
                 txt = "Bạn muốn hủy!";

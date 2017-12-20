@@ -5,7 +5,7 @@
     <ol class="breadcrumb">
         <li><a href="<?php echo base_url('admin/dashboard'); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Quản lý tin tức</a></li>
-        <li class="active">Thêm mới tin tức</li>
+        <li class="active">Cập nhật</li>
     </ol>
     <!-- Main content -->
     <section class="content">
@@ -15,11 +15,11 @@
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Thêm mới tin tức</h3>
+                        <h3 class="box-title">Cập nhật tin tức</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form" method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/news/add'); ?>">
+                    <form role="form" method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/news/edit/'). $item->id ; ?>">
                         <div class="box-body">
                             <div class="form-group">
                                 <?php if ($this->session->flashdata('exist_name')) { ?>
@@ -48,13 +48,13 @@
                                             <div class="panel-body">
                                                 <div class="tab-content">
                                                     <div class="tab-pane fade in active" id="tab1default">
-                                                        <input type="text" name="name_vn" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đề tin">
+                                                        <input type="text" name="name_vn" class="form-control" id="exampleInputEmail1" value=" <?php echo $item->name_vn; ?>" placeholder="Nhập tên đề tin">
                                                     </div>
                                                     <div class="tab-pane fade" id="tab2default">
-                                                        <input type="text" name="name_en" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đề tin">
+                                                        <input type="text" name="name_en" class="form-control" id="exampleInputEmail1" value=" <?php echo $item->name_en; ?>" placeholder="Nhập tên đề tin">
                                                     </div>
                                                     <div class="tab-pane fade" id="tab3default">
-                                                        <input type="text" name="name_de" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đề tin">
+                                                        <input type="text" name="name_de" class="form-control" id="exampleInputEmail1"  value=" <?php echo $item->name_de; ?>" placeholder="Nhập tên đề tin">
                                                     </div>
 
                                                 </div>
@@ -79,10 +79,10 @@
                                         <label>Danh mục tin tức</label>
                                         <select name="category" class="form-control">
                                             <?php
-                                            if (!empty($category)) {
-                                                foreach ($category as $ct) {
+                                            if (!empty($categories)) {
+                                                foreach ($categories as $ct) {
                                                     ?>
-                                                    <option value="<?php echo $ct->id; ?>" <?php echo ($item->category_id == $ct->id) ? 'selected="selected"' : '' ?>> <?php echo $ct->name; ?></option>
+                                                    <option value="<?php echo $ct->id; ?>" <?php echo ($item->category_id == $ct->id) ? 'selected="selected"' : '' ?>> <?php echo $ct->name_vn; ?></option>
                                                     <?php
                                                 }
                                             }

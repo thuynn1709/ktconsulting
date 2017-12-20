@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="./ktconsulting.png" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <title><?php echo lang("header_company_name"); ?> </title>
         <!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -35,8 +35,9 @@
         <link href="<?php echo base_url(); ?>public/frontend/css/style.css" rel="stylesheet">
         <!-- Responsive CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/responsive.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>public/frontend/css/YTPlayer.css" rel="stylesheet" media="screen">
         <link href="<?php echo base_url(); ?>public/frontend/css/blog.css" rel="stylesheet" media="screen">
-
+        
         <!-- jQuery -->
         <script src="<?php echo base_url(); ?>public/frontend/js/vendor/modernizr-2.8.1.min.js"></script>
 
@@ -134,7 +135,7 @@
                         <nav class="navbar navbar-default" role="navigation">
                             <div class="container mainnav">
                                 <div class="navbar-header">
-                                    <h1 class="logo"><a class="navbar-brand" href="index.html"><img src="<?php echo base_url(); ?>public/frontend/img/logo.png" alt=""></a></h1>
+                                    <h1 class="logo"><a class="navbar-brand" style="padding-bottom: 50px !important"  href="index.html"><img src="<?php echo base_url(); ?>public/frontend/img/logo.jpg" alt=""></a></h1>
 
                                     <!-- offcanvas-trigger -->
                                     <button type="button" class="navbar-toggle collapsed pull-right" >
@@ -153,11 +154,11 @@
 
                                     <ul class="nav navbar-nav navbar-right">
                                         <!-- Home -->
-                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="home.html"><?php echo lang("menu_home"); ?></a></li>
+                                        <li <?php if ($controller == 'home') echo 'class="active"'; ?>><a href="<?php echo base_url('home'); ?>"><?php echo lang("menu_home"); ?></a></li>
                                         <!-- /Home -->
 
                                         <!-- Services -->
-                                        <li class="dropdown <?php if ($controller == 'services') echo ' active '; ?>"><a href="#"><?php echo lang("menu_services"); ?> <span class="fa fa-angle-down"></span></a>
+                                        <li class="dropdown <?php if ($controller == 'services') echo ' active '; ?>"><a href="<?php echo base_url('services'); ?>"><?php echo lang("menu_services"); ?> <span class="fa fa-angle-down"></span></a>
                                             <!-- submenu-wrapper -->
                                             <div class="submenu-wrapper">
                                                 <div class="submenu-inner">
@@ -175,9 +176,9 @@
                                         </li>
 
                                         <!-- Blog -->
-                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="home.html"><?php echo lang("menu_news"); ?></a></li>
+                                        <li <?php if ($controller == 'news') echo 'class="active"'; ?>><a href="<?php echo base_url('news'); ?>"><?php echo lang("menu_news"); ?></a></li>
 
-                                        <li <?php if ($controller == 'contact') echo 'class="active"'; ?>><a href="contact.html"><?php echo lang("menu_contact"); ?></a></li>
+                                        <li <?php if ($controller == 'contact') echo 'class="active"'; ?>><a href="<?php echo base_url('contact'); ?>"><?php echo lang("menu_contact"); ?></a></li>
                                     </ul>
                                 </div><!-- /.navbar-collapse -->
                             </div><!-- /.container -->

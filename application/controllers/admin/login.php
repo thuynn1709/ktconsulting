@@ -31,7 +31,7 @@ class Login extends CI_Controller{
 
     public function login(){
         if( $this->session->has_userdata('email')){
-            redirect(base_url('admin/product/index'));
+            redirect(base_url('admin/news/index'));
         }else {
             $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]');

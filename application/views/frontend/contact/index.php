@@ -5,7 +5,7 @@
                 <h1><?php echo lang("header_contact_us"); ?></h1>
             </div>
             <ol class="breadcrumb">
-                <li><a href="#"><?php echo lang("menu_home"); ?></a></li>
+                <li><a href="<?php echo base_url('home'); ?>"><?php echo lang("menu_home"); ?></a></li>
                 <li class="active"><?php echo lang("menu_contact"); ?></li>
             </ol>
         </div>
