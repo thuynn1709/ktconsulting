@@ -76,6 +76,11 @@ class Contact extends MY_Controller {
         }
     }
 
+    public function testconnect() {
+
+        
+    }
+
     public function register_contact() {
         if ($_POST) {
             $this->form_validation->set_rules('name', 'Name', 'trim|required|min_length[1]');
