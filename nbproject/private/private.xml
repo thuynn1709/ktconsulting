@@ -3,22 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/header.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/config/database.php</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Contact.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Home.php</file>
-=======
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/news/index.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/vietnamese/blog_lang.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/vietnamese/header_lang.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/LanguageSwitcher.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/FNew_model.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/News.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/hooks/LanguageLoader.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/helpers/convert_time_helper.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/german/header_lang.php</file>
-            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/english/header_lang.php</file>
->>>>>>> f430f1b82f94583716a663b875aaad274778fa07
         </group>
     </open-files>
 </project-private>
