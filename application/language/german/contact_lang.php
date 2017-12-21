@@ -14,3 +14,9 @@ $lang['contact_are_you_sure_to_send'] = 'Möchten Sie definitiv eine Nachricht s
 $lang['contact_send_success'] = 'Die Nachricht wurde erfolgreich gesendet!';
 $lang['contact_send_fail'] = 'Nachricht gesendet fehlgeschlagen. Bitte versuche es erneut !';
 $lang['contact_location_map'] = 'LandKarte';
+
+$lang['contact_place_contact'] = 'Ort & Kontakt';
+$lang['contact_my_location'] = 'Unsere Position !';
+$lang['contact_quicklink'] = 'Schnelle Links';
+$lang['contact_stay_in_touch'] = 'in Kontakt bleiben';
+$lang['contact_stay_in_touch_content'] = 'Geben Sie Ihre E-Mail-Adresse ein, um Neuigkeiten und Angebote von uns zu erhalten';

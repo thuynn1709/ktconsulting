@@ -134,7 +134,7 @@
 <!-- featuer-section end -->
 
 <!-- why-us-setion start -->
-<section class="why-us-setion section-padding">
+<section class="why-us-setion section-padding" style="display: none;">
     <div class="container">
         <div class="row text-center">
             <div class="col-xs-12">
@@ -235,7 +235,7 @@
 <!-- why-us-setion end -->
 
 <!-- testimonial-section start -->
-<section class="testimonial-section section-padding">
+<section class="testimonial-section section-padding" style="display: none;">
     <div class="container text-center">
         <div class="row">
             <div class="col-xs-12">
@@ -281,7 +281,7 @@
 
         <hr>
 
-        <div class="partner-section">
+        <div class="partner-section" style="display: none;">
             <div class="row row-content">
                 <div class="col-md-12">
                     <div class="owl-carousel partner-carousel">
@@ -329,7 +329,7 @@
 <!-- testimonial-section end -->
 
 <!-- counter start -->
-<section class="counter-section" data-stellar-background-ratio="0.5">
+<section class="counter-section" data-stellar-background-ratio="0.5" style="display: none;">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-xs-12">

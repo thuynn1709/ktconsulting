@@ -67,7 +67,7 @@
                         $CI = & get_instance();
                         $siteLang = $CI->session->userdata('site_lang');
                         if ($siteLang == 'vietnamese') {
-                            echo lang("street") . 'Herzberg 33-34';
+                            echo lang("street") . ' Herzberg 33-34';
                         } else {
                             echo 'Herzberg ' . lang("street") . ' 33-34';
                         }

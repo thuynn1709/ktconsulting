@@ -21,3 +21,4 @@ $lang['contact_form'] = 'Contact Form';
 
 $lang['form_get_a_quote'] = 'Get a Quote';
 $lang['form_request_a_rate'] = 'Request a rate for the shipping of your goods.';
+$lang['form_send_to'] = 'Send';

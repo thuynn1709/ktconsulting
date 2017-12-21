@@ -16,6 +16,7 @@ class Home extends MY_Controller {
     //put your code here
     public function __construct() {
         parent::__construct();
+        $this->load->library('session');
         $this->load->model('admin/featuresitems_model');
         $this->load->model('admin/smallmenuitems_model');
     }

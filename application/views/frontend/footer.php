@@ -8,18 +8,25 @@
         <div class="row">
             <div class="col-md-3 col-md-offset-1 col-sm-4">
                 <div class="footer-widget">
-                    <h3>Place &amp; Contact</h3>
-
+                    <h3><?php echo lang('contact_place_contact'); ?></h3>
+                    
                     <address>
-                        384 Maple Circle<br>
-                        Simi Valley, Nevada 47424<br>
-
-                        <!-- Google Map Modal Trigger -->
-                        <button type="button" class="modal-map" data-toggle="modal" data-target="#cssMapModal">Location  Map</button>
-
-                        <span class="tel">(554) 616-9926</span>
+                        <?php
+                        $CI = & get_instance();
+                        $siteLang = $CI->session->userdata('site_lang');
+                        if ($siteLang == 'vietnamese') {
+                            echo lang("street") . ' Herzberg 33-34';
+                        } else {
+                            echo 'Herzberg ' . lang("street") . ' 33-34';
+                        }
+                        ?>
+                        <br> 
+                        Berlin 10365 <br>
+                        <button type="button" class="modal-map" data-toggle="modal" data-target="#cssMapModal"><?php echo lang('contact_location_map'); ?></button>
+                        <span class="tel">030-57794047</span>
                     </address>
 
+                    
 
                     <!-- Modal -->
                     <div class="modal fade" id="cssMapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -27,7 +34,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Our Location</h4>
+                                    <h4 class="modal-title" id="myModalLabel"><?php echo lang('contact_my_location'); ?></h4>
                                 </div>
                                 <div class="modal-body">
 
@@ -42,28 +49,27 @@
 
             <div class="col-md-3 col-sm-4">
                 <div class="footer-widget">
-                    <h3>About Transport</h3>
+                    <h3><?php echo lang('contact_quicklink'); ?></h3>
 
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="our-people.html">Our people</a></li>
-                        <li><a href="career.html">Career</a></li>
-                        <li><a href="faq.html">FAQ Page</a></li>
+                        <li><a href="<?php echo base_url('about'); ?>"><?php echo lang("menu_about"); ?></a></li>
+                        <li><a href="javascript:;"><?php echo lang("menu_services"); ?></a></li>
+                        <li><a href="<?php echo base_url('news'); ?>"><?php echo lang("menu_news"); ?></a></li>
+                        <li><a href="<?php echo base_url('contact'); ?>"><?php echo lang("menu_contact"); ?></a></li>
                     </ul>
                 </div><!-- /.footer-widget -->
             </div><!-- /.col-md-4 -->
 
             <div class="col-md-4 col-sm-4">
                 <div class="footer-widget">
-                    <h3>Stay in Touch</h3>
-                    <p>Enter your email address to receive news &amp; offers from us</p>
+                    <h3><?php echo lang("contact_stay_in_touch"); ?></h3>
+                    <p><?php echo lang("contact_stay_in_touch_content"); ?></p>
 
                     <form class="newsletter-form">
                         <div class="form-group">
-                            <label class="sr-only" for="InputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
-                            <button type="submit" class="">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+                            <label class="sr-only" for="InputEmail1"><?php echo lang("form_email_addresse"); ?></label>
+                            <input type="email" class="form-control" id="InputEmail1" placeholder="<?php echo lang("form_email_addresse"); ?>">
+                            <button type="submit" class=""><?php echo lang("form_send_to"); ?> &nbsp;<i class="fa fa-angle-right"></i></button>
                         </div>
                     </form>		        				
                 </div><!-- /.footer-widget -->
@@ -76,7 +82,7 @@
 <!-- copyright-section start -->
 <footer class="copyright-section">
     <div class="container text-center">
-        <div class="footer-menu">
+        <div class="footer-menu" style="display: none;">
             <ul>
                 <li><a href="#">Privacy &amp; Cookies</a></li>
                 <li><a href="#">Terms &amp; Conditions</a></li>

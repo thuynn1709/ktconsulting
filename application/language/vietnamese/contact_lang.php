@@ -16,4 +16,11 @@ $lang['contact_send_success'] = 'Tin nhắn được gửi thành công !';
 $lang['contact_send_fail'] = 'Tin nhắn gửi không thành công. Vui lòng thử lại !';
 $lang['contact_location_map'] = 'Bản đồ';
 
+$lang['contact_place_contact'] = 'Địa chỉ & Liên lạc';
+$lang['contact_my_location'] = 'Địa chỉ của chúng tôi !';
+$lang['contact_quicklink'] = 'Quick Links';
+$lang['contact_stay_in_touch'] = 'Nhận email & tin tức';
+$lang['contact_stay_in_touch_content'] = 'Nhập địa chỉ email để nhận thông báo mới & khuyến mại của chúng tôi';
+
+
 

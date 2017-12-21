@@ -22,3 +22,4 @@ $lang['contact_form'] = 'Contact Form';
 
 $lang['form_get_a_quote'] = 'Nhận báo giá';
 $lang['form_request_a_rate'] = 'Yêu cầu một mức giá cho việc vận chuyển hàng hoá của bạn';
+$lang['form_send_to'] = 'Gửi đi';
