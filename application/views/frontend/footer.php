@@ -3,7 +3,7 @@
 
 
 <!-- footer-widget-section start -->
-<section class="footer-widget-section section-padding" style="display: none">
+<section class="footer-widget-section section-padding" style="">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1 col-sm-4">
@@ -75,7 +75,7 @@
 
 <!-- copyright-section start -->
 <footer class="copyright-section">
-    <div class="container text-center" style="display: none">
+    <div class="container text-center">
         <div class="footer-menu">
             <ul>
                 <li><a href="#">Privacy &amp; Cookies</a></li>
