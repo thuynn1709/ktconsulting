@@ -18,3 +18,6 @@ $lang['form_phonenumber'] = 'Telephonenummer';
 $lang['form_content_email'] = 'Text';
 $lang['form_send_email'] = 'Absenden';
 $lang['contact_form'] = 'Kontakt Formular';
+
+$lang['form_get_a_quote'] = 'Ein Angebot bekommen';
+$lang['form_request_a_rate'] = 'Fordern Sie einen Preis für den Versand Ihrer Waren an.';
