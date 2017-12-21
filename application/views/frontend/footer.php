@@ -3,7 +3,7 @@
 
 
 <!-- footer-widget-section start -->
-<section class="footer-widget-section section-padding">
+<section class="footer-widget-section section-padding" style="display: none">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-1 col-sm-4">
@@ -75,7 +75,7 @@
 
 <!-- copyright-section start -->
 <footer class="copyright-section">
-    <div class="container text-center">
+    <div class="container text-center" style="display: none">
         <div class="footer-menu">
             <ul>
                 <li><a href="#">Privacy &amp; Cookies</a></li>
@@ -102,15 +102,15 @@
         <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
             <li class="<?php if ($controller == 'home') echo ' active '; ?>"><a href="<?php echo base_url('home'); ?>"><?php echo lang("menu_home"); ?><span class="sr-only">(current)</span></a></li>
 
+            <!-- About us -->
+            <li <?php if ($controller == 'about') echo 'class="active"'; ?>><a href="<?php echo base_url('about'); ?>"><?php echo lang("menu_about"); ?></a></li>
+            <!-- /About us -->
             <li class="<?php if ($controller == 'services') echo ' active '; ?>">
-                <a href="<?php echo base_url('services'); ?>"><?php echo lang("menu_services"); ?></a>
+                <a href="<?php echo base_url('services/consulting'); ?>"><?php echo lang("menu_services"); ?></a>
                 <ul>
-                    <li><a href="air.html">Air transportation</a></li>
-                    <li><a href="marine.html">Marine transportation</a></li>
-                    <li><a href="moving.html">Moving &amp; storage</a></li>
-                    <li><a href="shipping.html">Shipping &amp; operations</a></li>
-                    <li><a href="transportation.html">Transportation logistics</a></li>
-                    <li><a href="trucking.html">Trucking</a></li>
+                    <li><a href="<?php echo base_url('services/consulting'); ?>"><?php echo lang("menu_service_consulting"); ?></a></li>
+                    <li><a href="<?php echo base_url('services/import_export'); ?>"><?php echo lang("menu_service_import_export"); ?></a></li>
+                    <li><a href="<?php echo base_url('services/logistics'); ?>"><?php echo lang("menu_service_logistic"); ?></a></li>
                 </ul>
 
             </li>

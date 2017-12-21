@@ -139,7 +139,7 @@
                                     <h1 class="logo"><a class="navbar-brand" style="padding-bottom: 50px !important"  href="index.html"><img src="<?php echo base_url(); ?>public/frontend/img/logo.jpg" alt=""></a></h1>
 
                                     <!-- offcanvas-trigger -->
-                                    <button type="button" class="navbar-toggle collapsed pull-right" style="display:none" >
+                                    <button type="button" id="cainutngunay" class="navbar-toggle collapsed pull-right">
                                         <span class="sr-only">Toggle navigation</span>
                                         <i class="fa fa-bars"></i>
                                     </button>

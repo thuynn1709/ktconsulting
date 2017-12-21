@@ -145,13 +145,25 @@
 }
 
 @media only screen and (min-width : 768px) and (max-width : 991px) {
+    #cainutngunay {
+        display: none;
+    }
+
 }
  
 /* Desktops and laptops */
 @media only screen and (min-width : 1224px) {
+    #cainutngunay {
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width : 992px) {
+    
+    #cainutngunay {
+        display: none;
+    }
 
   .section-padding {
     padding: 80px 0;
