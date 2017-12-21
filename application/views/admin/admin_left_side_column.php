@@ -62,6 +62,16 @@
         </li>
         
         <li>
+          <a href="<?php echo base_url('admin/services/index') ; ?>">
+            <i class="fa fa-user-o" aria-hidden="true"></i> <span>Quản lý trang dịch vụ</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green"></small>
+            </span>
+          </a>
+        </li>
+        
+        
+        <li>
           <a href="<?php echo base_url('admin/contact') ; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i> <span>Quản lý email</span>
             <span class="pull-right-container">
@@ -80,8 +90,6 @@
             </a>
             <ul class="treeview-menu">
                 <li><a href="<?php echo base_url('admin/slidebar') ; ?>"><i class="fa fa-circle-o"></i> Slide trang chủ</a></li>
-                <li><a href="<?php echo base_url('admin/config/featuresitems') ; ?>"><i class="fa fa-circle-o"></i> Sản phẩm nổi bật trang chủ</a></li>
-                <li><a href="<?php echo base_url('admin/config/small_menu_items') ; ?>"><i class="fa fa-circle-o"></i> Danh mục SP nổi bật trang chủ</a></li>
             </ul>
         </li>
         

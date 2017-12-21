@@ -24,7 +24,7 @@ class Login extends CI_Controller{
     public function index(){
         // Check if the cookie exists
         if( $this->session->has_userdata('email')){
-            redirect(base_url('admin/product/index'));
+            redirect(base_url('admin/dashboard/index'));
         }
         $this->load->view('admin/login/login');
     }
@@ -49,7 +49,7 @@ class Login extends CI_Controller{
                             'group'=> $a_UserChecking->group
                         );
                         $this->session->set_userdata($user_info);
-                        redirect(base_url('admin/product/index'));
+                        redirect(base_url('admin/dashboard/index'));
                 }
                 $this->b_Check = false;
             }

@@ -147,7 +147,7 @@ class Slidebar extends MY_Controller {
                     'status' => $status,
                     'created' => now()
                 );
-                if ($this->slidebar_model->insert($data)) {
+                if ($this->slidebar_model->update($id, $data)) {
                     redirect('admin/slidebar/index');
                 } else {
                     redirect('admin/slidebar/add');

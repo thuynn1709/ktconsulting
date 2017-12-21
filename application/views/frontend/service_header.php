@@ -30,8 +30,6 @@
         <link href="<?php echo base_url(); ?>public/frontend/css/magnific-popup.css" rel="stylesheet">
         <!-- Main menu -->
         <link href="<?php echo base_url(); ?>public/frontend/css/menu.css" rel="stylesheet">
-        <!-- Template Common Styles -->
-        <link href="<?php echo base_url(); ?>public/frontend/css/template.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="<?php echo base_url(); ?>public/frontend/css/style.css" rel="stylesheet">
         <!-- Responsive CSS -->

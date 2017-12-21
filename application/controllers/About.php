@@ -11,20 +11,18 @@
  *
  * @author Nguyen Ruy
  */
-class Home extends MY_Controller {
+class About extends MY_Controller {
 
     //put your code here
     public function __construct() {
         parent::__construct();
-        $this->load->model('admin/featuresitems_model');
-        $this->load->model('admin/smallmenuitems_model');
+        $this->load->helper(array('form', 'url', 'cookie'));
+        $this->load->library(array('form_validation', 'session'));
     }
 
     public function index() {
-        $this->_loadFrontendHeader('home');
-        $this->load->view('frontend/home/index');
-        $this->_loadFrontendCtaSection();
-        $this->_loadFrontendOtherOfficeAddress();
+        $this->_loadFrontendHeader('about');
+        $this->load->view('frontend/about/index');
         $this->_loadFrontendFooter();
     }
 

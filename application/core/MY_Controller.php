@@ -15,13 +15,22 @@ class MY_Controller extends CI_Controller {
         $this->load->view('frontend/header', $data);
     }
     
+    public function _loadFrontendHeaderService($controller){
+        $data = array();
+        $data['controller'] = $controller;
+        $this->load->view('frontend/service_header', $data);
+    }
+    
+    public function _loadFrontendCtaSection(){
+        $this->load->view('frontend/cta-section');
+    }
+    
+    public function _loadFrontendOtherOfficeAddress(){
+        $this->load->view('frontend/other-office-address');
+    }
     
     public function _loadFrontendFooter(){
         $this->load->view('frontend/footer');
-    }
-    
-    public function _loadFrontendContent(){
-        $this->load->view('frontend/content');
     }
     
     public function _loadAdminHeader(){
