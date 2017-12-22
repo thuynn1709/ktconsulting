@@ -15,9 +15,10 @@ class News extends MY_Controller {
     //put your code here
     public function __construct() {
         parent::__construct();
-        $this->load->model('fnew_model');
-        $this->load->model('fnewcategory_model');
+        $this->load->model('newfront_model');
+        $this->load->model('newcategoryfront_model');
         $this->load->library('pagination');
+        
     }
     
     public function index() {
@@ -34,7 +35,7 @@ class News extends MY_Controller {
         $limit = 5;
         $config = array();
         $config["base_url"] = base_url() . "news/index";
-        $total_row = $this->fnew_model->count_all_results($search);
+        $total_row = $this->newfront_model->count_all_results($search);
         $config["total_rows"] = $total_row;
         $config["per_page"] = $limit;
         $config['use_page_numbers'] = TRUE;
@@ -60,15 +61,15 @@ class News extends MY_Controller {
         $this->pagination->initialize($config);
        
         $offset = $this->uri->segment(3) > 0 ? (($this->uri->segment(3) + 0) * $config['per_page'] - $config['per_page']) : $this->uri->segment(3);
-        $data["results"] = $this->fnew_model->get_all($search, $config["per_page"], $offset);
+        $data["results"] = $this->newfront_model->get_all($search, $config["per_page"], $offset);
         $data["links"] = $this->pagination->create_links();
 
         // View data according to array.
         $data['search'] = $search;
 
-        $data['categories'] = $this->fnewcategory_model->get_alls();
-        $data['recent_post'] = $this->fnew_model->get_recent_post();
-        $data['most_read'] = $this->fnew_model->get_most_readed();
+        $data['categories'] = $this->newcategoryfront_model->get_alls();
+        $data['recent_post'] = $this->newfront_model->get_recent_post();
+        $data['most_read'] = $this->newfront_model->get_most_readed();
  
         $this->load->view('frontend/news/index', $data);
         $this->_loadFrontendFooter();
@@ -79,7 +80,7 @@ class News extends MY_Controller {
         if (empty($alias)) {
             show_404();
         }
-        $result = $this->fnew_model->get_by_alias($alias);
+        $result = $this->newfront_model->get_by_alias($alias);
         
         if (empty($result)) {
             show_404();
@@ -87,12 +88,12 @@ class News extends MY_Controller {
         $this->_loadFrontendHeader('news');
         $data['item'] = $result;
         $data['siteLang'] = $this->session->userdata('site_lang');
-        $data['categories'] = $this->fnewcategory_model->get_alls();
-        $data['recent_post'] = $this->fnew_model->get_recent_post();
-        $data['most_read'] = $this->fnew_model->get_most_readed();
-        $data['link_prev'] = $this->fnew_model->get_prev_id($result->id);
-        $data['link_next'] = $this->fnew_model->get_next_id($result->id);
-        $this->fnew_model->update_views($result->id);
+        $data['categories'] = $this->newcategoryfront_model->get_alls();
+        $data['recent_post'] = $this->newfront_model->get_recent_post();
+        $data['most_read'] = $this->newfront_model->get_most_readed();
+        $data['link_prev'] = $this->newfront_model->get_prev_id($result->id);
+        $data['link_next'] = $this->newfront_model->get_next_id($result->id);
+        $this->newfront_model->update_views($result->id);
         $this->load->view('frontend/news/detail', $data);
         $this->_loadFrontendFooter();
         

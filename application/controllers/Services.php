@@ -18,7 +18,7 @@ class Services extends MY_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url', 'cookie'));
         $this->load->library(array('form_validation', 'session'));
-        $this->load->model('fservices_model');
+        $this->load->model('servicesfront_model');
     }
 
     public function consulting() {
@@ -26,7 +26,7 @@ class Services extends MY_Controller {
         $data = array();
         $data['title_menu'] = lang('menu_service_consulting');
         $data['active'] = 'consulting';
-        $item = $this->fservices_model->get_one();
+        $item = $this->servicesfront_model->get_one();
         $siteLang = $this->session->userdata('site_lang');
         $content_service = '';
         if ($siteLang == 'vietnamese') {
@@ -49,7 +49,7 @@ class Services extends MY_Controller {
         $data['title_menu'] = lang('menu_service_import_export');
         $data['service_open_hour'] = lang('service_open_hour');
         $data['active'] = 'import_export';
-        $item = $this->fservices_model->get_one();
+        $item = $this->servicesfront_model->get_one();
         $siteLang = $this->session->userdata('site_lang');
         $content_service = '';
         if ($siteLang == 'vietnamese') {
@@ -71,7 +71,7 @@ class Services extends MY_Controller {
         $data = array();
         $data['title_menu'] = lang('menu_service_logistic');
         $data['active'] = 'logistics';
-        $item = $this->fservices_model->get_one();
+        $item = $this->servicesfront_model->get_one();
         $siteLang = $this->session->userdata('site_lang');
         $content_service = '';
         if ($siteLang == 'vietnamese') {
