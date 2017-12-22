@@ -11,20 +11,18 @@
  *
  * @author Nguyen Ruy
  */
-class FServices_model extends CI_Model {
+class Slidebarfront_model extends CI_Model {
    
-    public $table = 'services';
-    private $id = 1;
+    public $table = 'slidebar';
     //put your code here
     public function __construct() {
         parent::__construct();
     }
-
-    public function get_one() {
-        $this->db->where('id', $this->id);
-        $this->db->limit( 1);
-        $data =  $this->db->get( $this->table)->row();
-        return $data;
+    
+    public function get_all($limit = 2, $offset = 0) {
+        $this->db->order_by("created", "desc");
+        $this->db->where('status', 1);
+        return  $this->db->get( $this->table, $limit, $offset)->result();
     }
     
 }

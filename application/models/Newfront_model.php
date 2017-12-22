@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FNew_model extends CI_Model {
+class Newfront_model extends CI_Model {
    
     public $table = 'news';
     //put your code here

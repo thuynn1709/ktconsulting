@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FUser_model extends CI_Model {
+class Userfront_model extends CI_Model {
    
     public $table = 'users';
     //put your code here

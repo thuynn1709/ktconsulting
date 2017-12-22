@@ -6,7 +6,6 @@ class MY_Controller extends CI_Controller {
         parent::__construct();
         $this->load->library(array('session'));
         $this->load->helper('cookie');
-        $this->load->model('fmenu_model');
     }
 
     public function _loadFrontendHeader($controller) {
