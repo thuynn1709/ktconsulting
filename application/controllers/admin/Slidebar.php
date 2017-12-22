@@ -118,9 +118,8 @@ class Slidebar extends MY_Controller {
             redirect('admin/slidebar/index');
         }
 
-
         if (isset($_POST['title_vn'])) {
-
+            $file_name = '';
             $this->load->library('upload', $this->set_upload_options());
             if ($this->upload->do_upload('img')) {
                 $upload_data = $this->upload->data();

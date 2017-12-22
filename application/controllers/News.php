@@ -18,7 +18,7 @@ class News extends MY_Controller {
         $this->load->model('newfront_model');
         $this->load->model('newcategoryfront_model');
         $this->load->library('pagination');
-        date_default_timezone_set('Europe/Berlin');
+        
     }
     
     public function index() {
