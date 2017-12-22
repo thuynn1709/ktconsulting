@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FNewcategory_model extends CI_Model {
+class Fnewcategory_Model extends CI_Model {
    
     public $table = 'news_category';
     //put your code here

@@ -29,7 +29,7 @@ class Contact extends MY_Controller {
     public function index() {
         $this->_loadFrontendHeader('contact');
         $this->load->view('frontend/contact/index');
-        $this->_loadFrontendOtherOfficeAddress();
+        //$this->_loadFrontendOtherOfficeAddress();
         $this->_loadFrontendFooter();
     }
 

@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FServices_model extends CI_Model {
+class Fservices_Model extends CI_Model {
    
     public $table = 'services';
     private $id = 1;

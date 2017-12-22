@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FSlidebar_model extends CI_Model {
+class Fslidebar_Model extends CI_Model {
    
     public $table = 'slidebar';
     //put your code here

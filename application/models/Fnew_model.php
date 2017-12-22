@@ -11,7 +11,7 @@
  *
  * @author Nguyen Ruy
  */
-class FNew_model extends CI_Model {
+class Fnew_Model extends CI_Model {
    
     public $table = 'news';
     //put your code here
