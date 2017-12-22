@@ -97,10 +97,10 @@ $db['default'] = array(
 
 $db['server'] = array(
 	'dsn'	=> '',
-	'hostname' => 'db715962811.db.1and1.com',
-	'username' => 'dbo715962811',
-	'password' => 'Ktconsulting116',
-	'database' => 'db715962811',
+	'hostname' => 'db716158841.db.1and1.com',
+	'username' => 'dbo716158841',
+	'password' => '12345678910',
+	'database' => 'db716158841',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

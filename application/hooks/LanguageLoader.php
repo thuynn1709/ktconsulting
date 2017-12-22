@@ -19,6 +19,7 @@ class LanguageLoader {
         $siteLang = $ci->session->userdata('site_lang');
        
         if ($siteLang) {
+            $ci->lang->load('home', $siteLang);
             $ci->lang->load('service', $siteLang);
             $ci->lang->load('about', $siteLang);
             $ci->lang->load('error', $siteLang);
@@ -28,6 +29,7 @@ class LanguageLoader {
             $ci->lang->load('contact', $siteLang);
             $ci->lang->load('form', $siteLang);
         } else {
+            $ci->lang->load('home', 'vietnamese');
             $ci->lang->load('about', 'vietnamese');
             $ci->lang->load('error', 'vietnamese');
             $ci->lang->load('blog', 'vietnamese');

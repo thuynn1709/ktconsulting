@@ -7,47 +7,68 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="<?php echo base_url(); ?>public/frontend/img/slider/slide-1.jpg" alt="Hero Slide">
-            <!--Slide Image-->
 
-            <div class="container">
-                <div class="carousel-caption">
-                    <small class="animated fadeIn">CALL US TODAY</small>
-                    <div class="phone animated lightSpeedIn">1-800-1234-567</div>
-                    <h1 class="animated lightSpeedIn">Making transportation fast and safe</h1>
+        <?php
+        if (!empty($slidebar)) {
+            $stt = 0;
+            $CI = &get_instance();
+            $siteLang = $CI->session->userdata('site_lang');
+            foreach ($slidebar as $rs) {
+                ?> 
+                <div class="item <?php echo $stt == 0 ?  'active' : ''; ?>  ">
+                    <img src="<?php echo base_url(); ?>public/images/slidebar/<?php echo $rs->img; ?>" alt="KT Consulting & Services BERLIN">
+                    <!--Slide Image-->
 
-                    <p class="lead animated lightSpeedIn">It's a tag line, where you can write a key point of your idea.
-                        It is a long
-                        established fact that a reader will be distracted.</p>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <small class="animated fadeIn"><?php echo lang('home_call_to_us'); ?></small>
+                            <div class="phone animated lightSpeedIn">030-57794047</div>
+                            <h1 class="animated lightSpeedIn">
+                                <?php
+                                if ($siteLang == 'vietnamese') {
+                                    echo $rs->title_vn;
+                                } else if ($siteLang == 'english') {
+                                    echo $rs->title_en != '' ? $rs->title_en : $rs->title_vn;
+                                } else {
+                                    echo $rs->title_de != '' ? $rs->title_de : $rs->title_vn;
+                                }
+                                ?>
 
-                    <a class="btn btn-primary animated lightSpeedIn" href="#">Work With Us Today</a>
+                            </h1>
+
+                            <p class="lead animated lightSpeedIn">
+                                <?php
+                                if ($siteLang == 'vietnamese') {
+                                    echo $rs->desc_vn;
+                                } else if ($siteLang == 'english') {
+                                    echo $rs->desc_en != '' ? $rs->desc_en : $rs->desc_vn;
+                                } else {
+                                    echo $rs->desc_de != '' ? $rs->desc_de : $rs->desc_vn;
+                                }
+                                ?>
+                            </p>
+                            <?php
+                            if ( $rs->link != '') {
+                                ?>
+                                <a class="btn btn-primary animated lightSpeedIn" href="<?php echo $rs->link; ?>"><?php echo lang('home_read_more'); ?> </a>
+                                <?php
+                            }
+                            ?>
+
+                        </div>
+                        <!--.carousel-caption-->
+                    </div>
+                    <!--.container-->
                 </div>
-                <!--.carousel-caption-->
-            </div>
-            <!--.container-->
-        </div>
-        <!--.item-->
+                <!--.item-->
 
-        <div class="item">
-            <img src="<?php echo base_url(); ?>public/frontend/img/slider/slide-2.jpg" alt="Hero Slide">
-            <!--Slide Image-->
+                <?php
+                $stt += 1;
+            }
+        }
+        ?> 
 
-            <div class="container">
-                <div class="carousel-caption">
 
-                    <h1 class="animated bounceIn">We value your time and money</h1>
-
-                    <p class="lead animated bounceIn">It's a tag line, where you can write a key point of your idea. It
-                        is a long
-                        established fact that a reader will be distracted.</p>
-                    <a class="btn btn-primary animated bounceIn" href="#">Work With Us Today</a>
-                </div>
-                <!--.carousel-caption-->
-            </div>
-            <!--.container-->
-        </div>
-        <!--.item-->
     </div>
     <!--.carousel-inner-->
 
@@ -69,8 +90,8 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section-title">Our 24 Hour’s Services</h2>
-                <span class="section-sub">Nullam ac urna ey felis dapibus<br> condimeytum sit amet</span>
+                <h2 class="section-title"><?php echo lang('home_service'); ?></h2>
+                <span class="section-sub"></span>
             </div>
         </div> <!-- /.row -->
 
@@ -81,9 +102,9 @@
                         <a href="#"><img src="<?php echo base_url(); ?>public/frontend/img/trans.jpg" alt=""></a>
                     </div>
 
-                    <h3>Transportation &amp; Logistics</h3>
-                    <p>Holisticly synergize maintainable intellectual<br> capital via viral interfaces. Energistically<br> embrace funyctionalized </p>
-                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                    <h3><?php echo lang('home_consulting'); ?></h3>
+                    <p><?php echo lang('home_consulting_detail'); ?></p>
+                    <a class="readmore" href="<?php echo base_url('services/consulting'); ?>"><?php echo lang('home_read_more'); ?> &nbsp;<i class="fa fa-angle-right"></i> </a>
                 </div>
             </div><!-- /.col-sm-4 -->
 
@@ -92,9 +113,9 @@
                     <div class="service-thumb-home">
                         <a href="#"><img src="<?php echo base_url(); ?>public/frontend/img/moving.jpg" alt=""></a>
                     </div>
-                    <h3>Moving &amp; Storage</h3>
-                    <p>Holisticly synergize maintainable intellectual<br> capital via viral interfaces. Energistically<br> embrace functionalized </p>
-                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                    <h3><?php echo lang('home_import_export'); ?></h3>
+                    <p><?php echo lang('home_import_export_detail'); ?></p>
+                    <a class="readmore" href="<?php echo base_url('services/import_export'); ?>"><?php echo lang('home_read_more'); ?> &nbsp;<i class="fa fa-angle-right"></i> </a>
                 </div>
 
             </div><!-- /.col-sm-4 -->
@@ -104,9 +125,9 @@
                     <div class="service-thumb-home">
                         <a href="#"><img src="<?php echo base_url(); ?>public/frontend/img/shipping.jpg" alt=""></a>
                     </div>
-                    <h3>Shipping Operations</h3>
-                    <p>Holisticly synergize maintainable intellectual<br> capital via viral interfaces. Energistically<br> embrace functionalized </p>
-                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                    <h3><?php echo lang('home_logistics'); ?></h3>
+                    <p><?php echo lang('home_logistics_detail'); ?></p>
+                    <a class="readmore" href="<?php echo base_url('services/logistics'); ?>"><?php echo lang('home_read_more'); ?> &nbsp;<i class="fa fa-angle-right"></i> </a>
                 </div>
             </div><!-- /.col-sm-4 -->
         </div> <!-- /.row -->
@@ -119,11 +140,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-xs-12">
-                <h2>We do care about your cargo!</h2>
+                <h2><?php echo lang('home_welcome'); ?></h2>
 
-                <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> 
-
-                <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                <?php echo lang('home_welcome_content'); ?>
 
                 <a href="#" class="btn btn-primary">View Details</a>
             </div>

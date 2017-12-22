@@ -169,7 +169,7 @@ class News extends MY_Controller {
             $name_vn = $_POST['name_vn'];
             $alias = sanitizeTitle($name_vn);
             $category = $_POST['category'];
-            $img = $file_name != '' ? $file_name : $product->img;
+            $img = $file_name != '' ? $file_name : $new->img;
 
             $desc_vn = $_POST['desc_vn'];
             $desc_de = $_POST['desc_de'];

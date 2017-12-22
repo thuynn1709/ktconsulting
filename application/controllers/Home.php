@@ -17,13 +17,17 @@ class Home extends MY_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->library('session');
-        $this->load->model('admin/featuresitems_model');
-        $this->load->model('admin/smallmenuitems_model');
+        $this->load->model('fslidebar_model');
+      
     }
 
     public function index() {
         $this->_loadFrontendHeader('home');
-        $this->load->view('frontend/home/index');
+        
+        $data = array();
+        $data['slidebar'] = $this->fslidebar_model->get_all();
+       
+        $this->load->view('frontend/home/index', $data);
         $this->_loadFrontendCtaSection();
         $this->_loadFrontendOtherOfficeAddress();
         $this->_loadFrontendFooter();

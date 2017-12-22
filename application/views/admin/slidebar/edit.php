@@ -22,11 +22,6 @@
                     <form role="form" method="post" enctype="multipart/form-data" action="<?php echo base_url('admin/slidebar/edit/'). $item->id ; ?>">
                         <div class="box-body">
                             <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span class="text-danger"><?php echo $error; ?></span>
-                                    </div>
-                                </div>
                                 <div class="row" >
 
                                     <div class="col-md-12">
@@ -74,7 +69,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label for="exampleInputEmail1">Mô tả tin tức</label>
+                                        <label for="exampleInputEmail1">Mô tả thông tin slide</label>
                                         <div class="panel with-nav-tabs panel-default">
                                             <div class="panel-heading">
                                                 <ul class="nav nav-tabs">
@@ -88,8 +83,8 @@
                                                     <div class="tab-pane fade in active" id="tabdesc1">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng việt
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng việt
+                                                                  
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -105,8 +100,7 @@
                                                             <!-- /.box-header -->
                                                             <div class="box-body pad">
 
-                                                                <textarea class="textarea" name="desc_vn" placeholder="Viết mô tả không quá 25 kí tự"
-                                                                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                                                                <textarea class="textarea" name="desc_vn" placeholder="Viết mô tả không quá 25 kí tự" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                                                     <?php echo $item->desc_vn ; ?>
                                                                 </textarea>
 
@@ -116,8 +110,8 @@
                                                     <div class="tab-pane fade" id="tabdesc2">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng anh
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng anh
+                                                                  
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -144,8 +138,7 @@
                                                     <div class="tab-pane fade" id="tabdesc3">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng đức
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng đức
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -198,7 +191,7 @@
 
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                                <button type="submit" class="btn btn-primary">Cập nhật</button>
                                 <button type="submit" id="cancel" class="btn btn-primary">Hủy bỏ</button>
                             </div>
                     </form>
@@ -224,7 +217,7 @@
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         //bootstrap WYSIHTML5 - text editor
-        $('.textarea').wysihtml5()
+        //$('.textarea').wysihtml5()
 
         $("#cancel").click(function () {
             window.location.href = '<?php echo base_url(); ?>admin/product/index';

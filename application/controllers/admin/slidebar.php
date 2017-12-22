@@ -75,12 +75,12 @@ class Slidebar extends MY_Controller {
                 $error['error'] = $this->upload->display_errors();
             } else {
                 $img = $this->upload->data('file_name');
-                $title_vn = $_POST['title_vn'];
-                $title_en = $_POST['title_en'];
-                $title_de = $_POST['title_de'];
-                $desc_vn = $_POST['desc_vn'];
-                $desc_en = $_POST['desc_en'];
-                $desc_de = $_POST['desc_de'];
+                $title_vn = trim($_POST['title_vn'] );
+                $title_en = trim($_POST['title_en'] );
+                $title_de = trim($_POST['title_de'] );
+                $desc_vn = trim($_POST['desc_vn'] );
+                $desc_en = trim($_POST['desc_en'] );
+                $desc_de = trim($_POST['desc_de'] );
                 $link = $_POST['link'];
                 $status = $_POST['status'];
 
@@ -118,42 +118,43 @@ class Slidebar extends MY_Controller {
             redirect('admin/slidebar/index');
         }
 
-        $data['error'] = '';
-        if (isset($_POST['title_vn'])) {
-            $img = '';
-            $this->upload->initialize($this->set_upload_options());
-            if (!$this->upload->do_upload('img')) {
-                $data['error'] = $this->upload->display_errors();
-            } else {
-                $img = $this->upload->data('file_name');
-                $title_vn = $_POST['title_vn'];
-                $title_en = $_POST['title_en'];
-                $title_de = $_POST['title_de'];
-                $desc_vn = $_POST['desc_vn'];
-                $desc_en = $_POST['desc_en'];
-                $desc_de = $_POST['desc_de'];
-                $link = $_POST['link'];
-                $status = $_POST['status'];
 
-                $data = array(
-                    'title_vn' => $title_vn,
-                    'title_en' => $title_en,
-                    'title_de' => $title_de,
-                    'desc_vn' => $desc_vn,
-                    'desc_en' => $desc_en,
-                    'desc_de' => $desc_de,
-                    'link' => $link,
-                    'img' => $img != '' ? $img : $data['item']->img,
-                    'status' => $status,
-                    'created' => now()
-                );
-                if ($this->slidebar_model->update($id, $data)) {
-                    redirect('admin/slidebar/index');
-                } else {
-                    redirect('admin/slidebar/add');
-                }
+        if (isset($_POST['title_vn'])) {
+
+            $this->load->library('upload', $this->set_upload_options());
+            if ($this->upload->do_upload('img')) {
+                $upload_data = $this->upload->data();
+                $file_name = $upload_data['file_name'];
+            }
+            $img = $file_name != '' ? $file_name : $data['item']->img;
+            $title_vn = trim($_POST['title_vn'] );
+            $title_en = trim($_POST['title_en']);
+            $title_de = trim($_POST['title_de']);
+            $desc_vn = trim($_POST['desc_vn']);
+            $desc_en = trim($_POST['desc_en']);
+            $desc_de = trim($_POST['desc_de']);
+            $link = $_POST['link'];
+            $status = $_POST['status'];
+
+            $data = array(
+                'title_vn' => $title_vn,
+                'title_en' => $title_en,
+                'title_de' => $title_de,
+                'desc_vn' => $desc_vn,
+                'desc_en' => $desc_en,
+                'desc_de' => $desc_de,
+                'link' => $link,
+                'img' => $img,
+                'status' => $status,
+                'created' => now()
+            );
+            if ($this->slidebar_model->update($id, $data)) {
+                redirect('admin/slidebar/index');
+            } else {
+                redirect('admin/slidebar/add');
             }
         }
+
 
         $this->load->view('admin/slidebar/edit', $data);
         $this->_loadAdminFooter();

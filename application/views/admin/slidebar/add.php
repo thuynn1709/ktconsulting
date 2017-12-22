@@ -66,7 +66,7 @@
                                     <div class="col-md-6">
                                         <label for="exampleInputFile">Ảnh slide</label>
                                         <input type="file" name="img">
-                                        <p class="help-block">484 x 441 px.</p>
+                                        <p class="help-block">1400 x 600 px.</p>
                                     </div>
                                 </div>
                             </div>  
@@ -74,7 +74,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label for="exampleInputEmail1">Mô tả tin tức</label>
+                                        <label for="exampleInputEmail1">Mô tả thông tin slide</label>
                                         <div class="panel with-nav-tabs panel-default">
                                             <div class="panel-heading">
                                                 <ul class="nav nav-tabs">
@@ -88,8 +88,8 @@
                                                     <div class="tab-pane fade in active" id="tabdesc1">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng việt
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng việt
+                                                                    
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -114,8 +114,8 @@
                                                     <div class="tab-pane fade" id="tabdesc2">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng anh
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng anh
+                                                                    
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -140,8 +140,7 @@
                                                     <div class="tab-pane fade" id="tabdesc3">
                                                         <div class="box">
                                                             <div class="box-header">
-                                                                <h3 class="box-title">Mô tả tin tức tiếng đức
-                                                                    <small>Simple and fast</small>
+                                                                <h3 class="box-title">Mô tả tiếng đức
                                                                 </h3>
                                                                 <!-- tools box -->
                                                                 <div class="pull-right box-tools">
@@ -218,7 +217,7 @@
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         //bootstrap WYSIHTML5 - text editor
-        $('.textarea').wysihtml5()
+        //$('.textarea').wysihtml5()
 
         $("#cancel").click(function () {
             window.location.href = '<?php echo base_url(); ?>admin/product/index';

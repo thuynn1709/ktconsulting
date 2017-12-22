@@ -10,53 +10,10 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-12-21 01:25:45
+Date: 2017-12-22 07:19:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for config_featureas_items
--- ----------------------------
-DROP TABLE IF EXISTS `config_featureas_items`;
-CREATE TABLE `config_featureas_items` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) DEFAULT NULL,
-  `product_name` varchar(60) DEFAULT NULL,
-  `created` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of config_featureas_items
--- ----------------------------
-INSERT INTO `config_featureas_items` VALUES ('6', '8', 'SkinActive Maske Granatapfel ', '1507553908');
-INSERT INTO `config_featureas_items` VALUES ('7', '13', 'Creme-Gel Maske Melone', '1507553949');
-INSERT INTO `config_featureas_items` VALUES ('8', '19', 'Velvet Matt Lip Cream 020', '1507553949');
-INSERT INTO `config_featureas_items` VALUES ('9', '20', 'Velvet Matt Lip Cream 080', '1507553949');
-INSERT INTO `config_featureas_items` VALUES ('10', '21', 'Ultimate Colour 500', '1507553949');
-INSERT INTO `config_featureas_items` VALUES ('11', '28', 'Lips2Last 45A ', '1507554198');
-
--- ----------------------------
--- Table structure for config_small_menu_home_items
--- ----------------------------
-DROP TABLE IF EXISTS `config_small_menu_home_items`;
-CREATE TABLE `config_small_menu_home_items` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `category_id` int(11) DEFAULT NULL,
-  `category_name` varchar(60) DEFAULT NULL,
-  `created` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of config_small_menu_home_items
--- ----------------------------
-INSERT INTO `config_small_menu_home_items` VALUES ('13', '10', 'Kem & Bàn chải', '1507558617');
-INSERT INTO `config_small_menu_home_items` VALUES ('14', '7', 'Make Up', '1507560266');
-INSERT INTO `config_small_menu_home_items` VALUES ('15', '8', 'Chăm sóc & Làm sạch da', '1507560266');
-INSERT INTO `config_small_menu_home_items` VALUES ('16', '9', 'Sữa', '1507560266');
-INSERT INTO `config_small_menu_home_items` VALUES ('17', '11', 'Vệ sinh răng miệng', '1507560266');
 
 -- ----------------------------
 -- Table structure for contact
@@ -73,7 +30,7 @@ CREATE TABLE `contact` (
   `city` varchar(40) DEFAULT NULL,
   `created` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of contact
@@ -92,6 +49,8 @@ INSERT INTO `contact` VALUES ('11', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguye
 INSERT INTO `contact` VALUES ('12', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fasdfasfdasfasfadsfsfdasfasdf', 'fdafafaf', '0', null, '1513549863');
 INSERT INTO `contact` VALUES ('13', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fasdfasfdasfasfadsfsfdasfasdf', 'fdafafaf', '1', null, '1513549868');
 INSERT INTO `contact` VALUES ('14', 'thuythoithit91@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'fdsafasdfdsafadsf', 'fdafafaf', '1', null, '1513549902');
+INSERT INTO `contact` VALUES ('15', 'thuynn1709@gmail.com', 'Ngoc Thuy Nguyen', '1732510257', 'dfadsfasdfdsfadsf', 'fdsafsafdsaf', '0', '', '1513816928');
+INSERT INTO `contact` VALUES ('16', 'dienchuot@yahoo.com', 'tyyyyyyyyyyy', '1732510257', 'dfafdafd', 'fdafafaf', '0', '', '1513816977');
 
 -- ----------------------------
 -- Table structure for menu
@@ -244,12 +203,28 @@ CREATE TABLE `slidebar` (
   `status` tinyint(2) DEFAULT NULL,
   `created` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of slidebar
 -- ----------------------------
-INSERT INTO `slidebar` VALUES ('1', 'Giao thông vận tải nhanh và an toàn', 'Making Transportation Fast And Safe', 'Transport schnell und sicher machen', '<p>Đó là một dòng từ khóa, nơi bạn có thể viết một điểm chính của ý tưởng của bạn. Đó là một thực tế được thành lập từ lâu rằng một độc giả sẽ bị phân tâm.</p>', '<p>It\'s a tag line, where you can write a key point of your idea. It is a long established fact that a reader will be distracted.</p>', '<p>Es ist eine Tagline, wo Sie einen Schlüsselpunkt Ihrer Idee schreiben können. Es ist eine seit langem etablierte Tatsache, dass ein Leser abgelenkt wird.<br></p>', 'tạm thời chưa có', 'slide-2.jpg', '1', '1513721268');
+INSERT INTO `slidebar` VALUES ('1', 'Giao thông vận tải nhanh và an toàn', 'Making Transportation Fast And Safe', 'Transport schnell und sicher machen', 'Đó là một dòng từ khóa, nơi bạn có thể viết một điểm chính của ý tưởng của bạn. Đó là một thực tế được thành lập từ lâu rằng một độc giả sẽ bị phân tâm.', '<p>It\'s a tag line, where you can write a key point of your idea. It is a long established fact that a reader will be distracted.</p>', '<p>Es ist eine Tagline, wo Sie einen Schlüsselpunkt Ihrer Idee schreiben können. Es ist eine seit langem etablierte Tatsache, dass ein Leser abgelenkt wird.<br></p>', 'tạm thời chưa có', 'slide-2.jpg', '1', '1513721268');
+INSERT INTO `slidebar` VALUES ('2', 'Chúng tôi tiết kiệm thời gian và tiền của bạn', 'We Value Your Time And Money', 'Wir sparen Ihre Zeit und Ihr Geld', 'Đó là một dòng từ khóa, nơi bạn có thể viết một điểm chính của ý tưởng của bạn. Đó là một thực tế được thành lập từ lâu rằng một độc giả sẽ bị phân tâm.', 'It\'s a tag line, where you can write a key point of your idea. It is a long established fact that a reader will be distracted.', 'Es ist eine Tagline, wo Sie einen Schlüsselpunkt Ihrer Idee schreiben können. Es ist eine seit langem etablierte Tatsache, dass ein Leser abgelenkt wird.', '', 'slide-21.jpg', '1', '1513923478');
+
+-- ----------------------------
+-- Table structure for tracking_email
+-- ----------------------------
+DROP TABLE IF EXISTS `tracking_email`;
+CREATE TABLE `tracking_email` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `created` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tracking_email
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for users
