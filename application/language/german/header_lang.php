@@ -13,3 +13,4 @@ $lang['header_menu_news'] = 'Nachrichten';
 $lang['menu_service_consulting'] = 'Beratung (Consulting)';
 $lang['menu_service_import_export'] = 'Import-Export';
 $lang['menu_service_logistic'] = 'Logistik';
+$lang['menu_satisfaction '] = 'Ihre Zufriedenheit ist unser Erfolg';

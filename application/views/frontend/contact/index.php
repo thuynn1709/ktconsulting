@@ -2,7 +2,7 @@
     <div class="container">
         <div class="page-header-wrap">
             <div class="page-header">
-                <h1><?php echo lang("header_contact_us"); ?></h1>
+                <h1><?php echo lang("menu_satisfaction"); ?></h1>
             </div>
             <ol class="breadcrumb">
                 <li><a href="<?php echo base_url('home'); ?>"><?php echo lang("menu_home"); ?></a></li>

@@ -13,3 +13,5 @@ $lang['header_menu_news'] = 'Tin tức';
 $lang['menu_service_consulting'] = 'Tư vấn';
 $lang['menu_service_import_export'] = 'Xuất nhập khẩu';
 $lang['menu_service_logistic'] = 'Vận tải & Giao nhận';
+
+$lang['menu_satisfaction '] = 'Sự hài lòng của quý khách là thành công của chúng tôi';
