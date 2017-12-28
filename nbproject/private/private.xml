@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/admin/News.php</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/admin/Slidebar.php</file>
@@ -10,5 +11,35 @@
             <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Services.php</file>
             <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/services/import-export.php</file>
         </group>
+=======
+<<<<<<< HEAD
+        <group>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/About.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/contact/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/home/index.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/views/frontend/footer.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/english/contact_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/Fnew_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/admin/contact_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/Fslidebar_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/Fservices_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/Fnewcategory_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Contact.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Home.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/Services.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/german/contact_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/models/Fuser_model.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/controllers/LanguageSwitcher.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/core/MY_Controller.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/vietnamese/form_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/english/form_lang.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/hooks/LanguageLoader.php</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/user_guide/license.html</file>
+            <file>file:/D:/xampp/htdocs/ktconsulting/application/language/german/form_lang.php</file>
+        </group>
+=======
+        <group/>
+>>>>>>> e272040afc2b0b4f8d6e575ac5ed8d7f89ec150c
+>>>>>>> 63e79de690ef05dc510f88abf4fa749b49a9b22a
     </open-files>
 </project-private>
